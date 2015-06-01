@@ -1,0 +1,339 @@
+/*  
+	version:	1.0
+	author:		Ieltxu Orue Ibañez  
+	date:		20150518
+	
+*/
+
+/* 
+	RESET
+	Resetear todos los estilos para cualquier navegador.
+*/
+/*@import url("reset.css");
+
+/*	
+	ETIQUETAS 
+	Dar un estilo general o base a toda la web.
+*/
+h1 {
+	color: green;
+	margin-bottom: 30px;
+	font-family: arial;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2{
+	margin-top: 30px;
+	clear: both;
+}
+
+strong{
+	font-weight: bold;
+}
+
+p {
+	margin-top: 10px;
+	font-family: arial;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+ul, ol{
+	list-style-type: disc;   
+}
+ul h2, ol h2{
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+ul ul, ol ol{
+	margin-left: 25px;
+	list-style-type: circle;   
+}
+li{
+	margin-bottom: 8px;
+}
+
+body {
+	/*background-image: url(http://static3.depositphotos.com/1000451/115/i/950/depositphotos_1153879-35mm-empty-film.jpg);*/
+	background-image: url('../img/back.jpg');
+}
+
+header, nav, section, aside, footer{
+	background-color: white;
+}
+
+
+a{
+	text-decoration: none;  
+}
+
+a:hover{
+	color: orange;
+}
+
+form input[type="text"]:required:valid{
+	border: 2px solid green;
+}
+form input[type="text"]:focus:required:invalid{
+	border: 2px solid red; 
+}
+
+figcaption{
+	clear: both;	
+}
+
+mark {
+	background-color:  #CCFF00;
+}
+
+canvas{
+	border: 1px solid black;
+}
+
+article{
+	border: 1px solid #013729;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+article h2{
+	color: #C10D57;
+	background-color: #88ABCB;
+	font-size: 25px;
+	padding: 5px 0;
+}
+
+/*
+	ESTILOS REUTILIZABLES
+	Regla con selector por CLASS para usar en todas las paginas.
+*/
+
+table.tabla_azul, .tabla_azul tr, .tabla_azul td {
+    margin: 0 auto;
+	border: 1px solid grey;
+	font-size: 35px;
+	text-align: center;
+	color: #0099ff;
+	font-family: arial;
+}
+.tabla_azul th, .tabla_azul td {
+    height:50px;
+	padding: 10px;
+}
+
+.tabla_azul th {
+	color: grey;
+}
+
+.btn_volver{
+	background-color: #DDD;
+}
+
+.numero{
+	font-size: 125px;
+	color: #0099CC;
+	font-family: arial;
+	text-align: center;
+	line-height: 150px;
+}
+
+.encabezado{
+	margin-left: 120px;
+    margin-right: 120px;
+	margin-bottom: 50px;
+	text-align: center;
+	border: 1px dotted green;
+}
+
+
+.rosa {
+	color: pink;
+}
+
+.cartel{
+	float: left;
+	margin-right: 30px;
+	width: 250px;
+	height: auto;
+}
+
+.ficha{
+	float: left;
+	width: 580px;
+	min-height: 360px;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.ficha p{
+	font-size: 35px;
+	line-height: 45px;
+}
+
+.ficha span{
+	font-size: 25px;
+	line-height: 30px;
+	color: orange;
+	font-weight: bold;
+}
+
+.ficha .destacado{
+	color: green;
+	font-weight: 600;
+}
+
+.sinopsis{
+	float: left;
+	height: 150px;
+	overflow: scroll;
+	background-color: white;
+	margin-bottom: 30px;
+}
+
+.negro{
+	background: white;
+	color: #0099ff;
+}
+
+.verde{
+	background: green;
+	color: white;
+}
+
+.imagen{
+	float: left;
+	width: 100px;
+	height: 100px;
+	
+}
+
+
+
+/*
+	PAGINAS
+	Una sección por cada pagina de nuestra web.
+*/
+
+/* NAV */
+#logo img{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+
+/* HOME */
+
+
+/* CARTELERA */
+#cartelera li h3{
+	color: #0076EC;
+	font-family: "dinengschriftstd", "Another Font", generic;
+	font-size: 25px;
+	font-weight: 500;
+	
+}
+
+#cartelera li h3:hover{
+	color: orange;
+}
+
+#cartelera ul {
+	list-style: none;   
+}
+
+/* CARTELERA DETALLE */
+#cartelera_detalle  h1{
+	color: blue;
+	text-align: left;
+}
+
+/* TABLA_AVANZADA */
+#tabla_avanzada h1{
+	font-style: italic;
+	color: blue;
+	text-align: left;
+}
+
+#tabla_avanzada table{
+    border: 1px solid black;
+	text-align: left;
+}
+#tabla_avanzada .cursiva {
+	font-size: 13px;
+	font-style: italic;
+}
+#tabla_avanzada .centrado {
+	text-align: center;
+}
+#tabla_avanzada .derecha {
+	text-align: right;
+	font-weight: bold;	
+}
+#tabla_avanzada .izquierda {
+	text-align: left;	
+}
+
+/* FOMULARIO */
+
+#formulario {
+	border: 3px solid #80ab54;
+	margin: 50px 100px;
+	padding: 0 50px;
+}
+
+#formulario input {
+	padding: 5px 10px;
+  	margin: 5px 25px 10px;
+}
+
+#formulario h2 {
+	font-size: 40px;
+	color: #80ab54;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+#formulario label {
+	font-size: 20px;
+}
+
+#formulario fieldset {
+	border: 2px groove #80ab54;
+	margin-right: 25px;
+	margin-bottom: 20px;
+}
+#formulario legend {
+	font-weight: bold;	
+	font-size: 30px;
+	color: #80ab54;
+}
+
+
+/* Reglas con selectores por ID */
+
+#dado{
+	width: 100px;
+	height: 100px;
+}
+#btn_ganador{
+	margin: 0 225px;
+	text-align: center;
+	font-size: 34px;
+	padding: 8px 14px 9px;
+	color: #0099CC;
+}
+
+
+#container{
+	width: 900px;
+	margin: 0 auto;
+	padding: 0 20px;
+	border-right: 1px solid grey;
+	border-left: 1px solid grey;
+	font-family: arial;
+	background-color: white;
+}
