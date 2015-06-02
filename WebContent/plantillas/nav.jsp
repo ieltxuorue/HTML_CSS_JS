@@ -119,7 +119,11 @@
 		<li><h2>Plugins</h2>
 			<ul>
 				<li><a title="Ejemplo de plugins dataTable" href="ejemplos/plugins/datatable.jsp" >dataTables</a></li>
-				
+			</ul>
+		</li>
+		<li><h2>Extras</h2>
+			<ul>
+				<li><a title="font icon" href="ejemplos/extras/font_icon.jsp" >Font Icon</a></li>
 			</ul>
 		</li>		
 	</ul>	
