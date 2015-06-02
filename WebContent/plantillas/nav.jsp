@@ -37,9 +37,21 @@
 	}
 	
 	.nav li ul {
-		
+		display: none;
 		position: absolute;
-		min-width: 140px;
+		min-width: 175px;
+	}
+	
+	.nav li:hover > ul{
+		display: block;
+	}
+	
+	.nav li ul li{
+		position: relative;
+	}
+	.nav li ul li ul{
+		right: -175px;
+		top: 0px;
 	}
 
 </style>
