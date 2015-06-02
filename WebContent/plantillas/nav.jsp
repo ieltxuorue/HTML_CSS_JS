@@ -19,7 +19,7 @@
 		margin: 0px;
 	}
 	
-	.nav li a, .nav li h2, .nav li h3 {
+	.menu li a, .menu li h2, .menu li h3 {
 		background-color: black;
 		color: white;
 		text-decoration: none;
@@ -28,28 +28,28 @@
 		display: block;
 	}
 	
-	.nav li h2:hover, .nav li h3:hover, .nav li a:hover {
+	.menu li h2:hover, .menu li h3:hover, .menu li a:hover {
 		background-color: #434343;
 	}
 
-	.nav > li {
+	.menu > li {
 		float: left;
 	}
 	
-	.nav li ul {
+	.menu li ul {
 		display: none;
 		position: absolute;
 		min-width: 175px;
 	}
 	
-	.nav li:hover > ul{
+	.menu li:hover > ul{
 		display: block;
 	}
 	
-	.nav li ul li{
+	.menu li ul li{
 		position: relative;
 	}
-	.nav li ul li ul{
+	.menu li ul li ul{
 		right: -175px;
 		top: 0px;
 	}
@@ -57,7 +57,7 @@
 </style>
 
 <nav>	
-	<ul class="nav">
+	<ul class="menu">
 		<li><h2>B&aacute;sicos</h2>
 			<ul>
 				<li><a title="Ir a ejemplos de parrafos y enlaces internos" href="ejemplos/basicos/parrafos_anclas.jsp" >Parrafos y Anclas internos</a></li>
