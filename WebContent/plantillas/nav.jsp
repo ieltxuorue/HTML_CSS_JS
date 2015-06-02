@@ -45,9 +45,9 @@
 				<li>
 					<h3>Selectores</h3>
 					<ul>
-						<li><a title="Atributo" href="ejemplos/CSS/selectores/atributo.jsp" > atributo </a></li>
-						<li><a title="Hijos" href="ejemplos/CSS/selectores/hijos.jsp" > hijos </a></li>
-						<li><a title="Adyacente" href="ejemplos/CSS/selectores/adyacente.jsp" > adyacente </a></li>
+						<li><a title="Atributo" href="ejemplos/CSS/selectores/atributo.jsp" > Atributo </a></li>
+						<li><a title="Hijos" href="ejemplos/CSS/selectores/hijos.jsp" > Hijos </a></li>
+						<li><a title="Adyacente" href="ejemplos/CSS/selectores/adyacente.jsp" > Adyacente </a></li>
 						<li><a title="Pseudo-clases" href="ejemplos/CSS/selectores/pseudo_clases.jsp" > Pseudo-clases </a></li>
 						<li><a title="Pseudo-elementos" href="ejemplos/CSS/selectores/pseudo_elementos.jsp" > Pseudo-elementos </a></li>
 						<li><a title="CSS3" href="ejemplos/CSS/selectores/css3.jsp" > CSS3 </a></li>
@@ -56,7 +56,11 @@
 				<li>
 					<h3>Posicionamiento</h3>
 					<ul>
-						<li><a title="XXX" href="#" > ... </a></li>
+						<li><a title="estatico" href="ejemplos/CSS/posicionamiento/estatico.jsp" > Normal o estatico </a></li>
+						<li><a title="relativo" href="ejemplos/CSS/posicionamiento/relativo.jsp" > Relativo </a></li>
+						<li><a title="absoluto" href="ejemplos/CSS/posicionamiento/absoluto.jsp" > Absoluto </a></li>
+						<li><a title="fijo" href="ejemplos/CSS/posicionamiento/fijo.jsp" > Fijo o fixed </a></li>
+						<li><a title="inherit" href="ejemplos/CSS/posicionamiento/inherit.jsp" > Inherit </a></li>
 					</ul>
 				</li>
 			</ul>
