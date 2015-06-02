@@ -61,6 +61,7 @@
 						<li><a title="absoluto" href="ejemplos/CSS/posicionamiento/absoluto.jsp" > Absoluto </a></li>
 						<li><a title="fijo" href="ejemplos/CSS/posicionamiento/fijo.jsp" > Fijo o fixed </a></li>
 						<li><a title="inherit" href="ejemplos/CSS/posicionamiento/inherit.jsp" > Inherit </a></li>
+						<li><a title="flotantes" href="ejemplos/CSS/posicionamiento/flotantes.jsp" > Elementos flotantes </a></li>
 					</ul>
 				</li>
 			</ul>
