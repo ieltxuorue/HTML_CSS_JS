@@ -1,3 +1,4 @@
+	</div> <!-- content -->
 	<footer>
 		<span class="copy">COPYRIGHT &copy; Ipartek Servicios Informaticos 2015</span>
 		<!-- Enlaces de paginas estaticas -->

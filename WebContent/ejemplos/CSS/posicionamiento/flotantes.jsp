@@ -1,5 +1,4 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
-<hr>
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 <hr>
 
@@ -28,9 +27,17 @@
 		clear: left;
 	}
 	
-	.clearfix:before, .clearfix:after { content: ""; display: table; }
-	.clearfix:after { clear: both; }
-	.clearfix { *zoom: 1; }
+	.cnt_article2 ul {
+    list-style: none;
+    background-color: aqua;
+	}
+	.cnt_article2 ul li {
+	    color: maroon;
+	    float: left;
+	    margin: 10px;
+	}
+	
+
 	
 </style>
 
@@ -80,10 +87,12 @@
 			<h2>Ejemplo 2 - CLEARFIX</h2>
 		</header>
 		<div class="cnt_article2">					
-			<div id="capa1">Capa - 1</div>
-			<div id="capa2">Capa - 2</div>
-			<div id="capa3">Capa - 3</div>
-			
+			<ul class="clearfix">
+			    <li><a href="#">Inicio</a></li>
+			    <li><a href="#">Nosotros</a></li>
+			    <li><a href="#">Servicios</a></li>
+			    <li><a href="#">Contacto</a></li>
+			</ul>
 		</div> <!-- cnt_article -->
 		<footer>
 			<pre>

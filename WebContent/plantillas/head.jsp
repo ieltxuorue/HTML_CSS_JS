@@ -40,12 +40,14 @@
 		<p>Habilitalo en tu navegador o no dispondras del 100% de la web</p>
 	</noscript>
 
-	<header>
-	
-	<div id="logo">
-		<a href=""><img src="img/dado.png" alt="Dado de seis caras"/></a>
-	</div>
-	
-	<h1>Ejemplos HTML5, CSS3 y JavaScript</h1>
+	<header id="head">
+		
+		<div class="clearfix">
+			<div id="logo">
+				<a href=""><img src="img/dado.png" alt="Dado de seis caras"/></a>
+			</div>
+		
+			<h1>Ejemplos HTML5, CSS3 y JavaScript</h1>
+		</div>	<!-- Navegacion menu principal -->
 
-	</header>
+	

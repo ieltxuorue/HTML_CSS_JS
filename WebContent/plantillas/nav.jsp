@@ -1,62 +1,4 @@
-<style>
-	nav * {
-		padding: 0px;
-		margin: 0px;
-	}
-	nav {
-		margin: 0px auto;
-		width: 1500px;
-		font-size: 12px;
-		font-family: Arial, Helvetica, sans-serif;
-	}
-	nav ul, nav ol {
-		list-style: none;
-	}
-	nav ul ul {
-		margin: 0px;
-	}
-	nav h2, nav h3 {
-		margin: 0px;
-	}
-	
-	.menu li a, .menu li h2, .menu li h3 {
-		background-color: black;
-		color: white;
-		text-decoration: none;
-		text-align: center;
-		padding: 10px 15px;
-		display: block;
-	}
-	
-	.menu li h2:hover, .menu li h3:hover, .menu li a:hover {
-		background-color: #434343;
-	}
-
-	.menu > li {
-		float: left;
-	}
-	
-	.menu li ul {
-		display: none;
-		position: absolute;
-		min-width: 175px;
-	}
-	
-	.menu li:hover > ul{
-		display: block;
-	}
-	
-	.menu li ul li{
-		position: relative;
-	}
-	.menu li ul li ul{
-		right: -175px;
-		top: 0px;
-	}
-
-</style>
-
-<nav>	
+<nav class="clearfix">	
 	<ul class="menu">
 		<li><h2>B&aacute;sicos</h2>
 			<ul>
@@ -69,8 +11,7 @@
 		</li>
 		<li><h2>Reales</h2>
 			<ul>
-				<li><a title="Cartelera Cine" href="ejemplos/reales/cartelera.jsp" > Cartelera </a></li>
-				<li><a title="Cartelera Cine 2" href="ejemplos/reales/cartelera2.jsp" > Cartelera 2 </a></li>
+				<li><a title="Cartelera Cine 2" href="ejemplos/reales/cartelera2.jsp" > Cartelera  </a></li>
 				<li><a title="Detalles de Cartelera Cine" href="ejemplos/reales/cartelera_detalle.jsp" > Cartelera en detalle </a></li>
 			</ul>
 		</li>	
@@ -128,3 +69,6 @@
 		</li>		
 	</ul>	
 </nav>
+</header>
+
+<div id="content">

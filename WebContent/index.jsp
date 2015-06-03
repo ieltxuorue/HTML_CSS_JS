@@ -1,11 +1,5 @@
-
 <jsp:include page="plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="plantillas/nav.jsp"></jsp:include>
-
-<hr>
 
 <div id="home">
 
