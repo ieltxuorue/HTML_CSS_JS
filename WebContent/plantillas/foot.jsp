@@ -1,18 +1,52 @@
 	</div> <!-- content -->
+	<style>
+		.copy, #list_paginas, #list_rrss{
+			float: left;
+		}
+		#list_paginas li, #list_rrss li {
+			float: left;	
+			text-decoration: none;
+		}
+		
+		#list_paginas, #list_rrss {
+			list-style: none;
+			margin: 0px;
+		}
+		
+		#foot{
+			margin: 0px auto;
+			width: 719px;
+			font-size: 15px;
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: black;
+		}
+		#list_paginas li a, #list_rrss li a, .copy{
+			background-color: white;
+			color: black;
+			text-decoration: none;
+			text-align: center;
+			padding: 10px 10px;
+			display: block;
+		}
+		
+	</style>
+	
 	<footer>
-		<span class="copy">COPYRIGHT &copy; Ipartek Servicios Informaticos 2015</span>
-		<!-- Enlaces de paginas estaticas -->
-		<ul id="list_paginas">
-			<li><a href="#">Contacto</a></li>
-			<li><a href="#">Aviso legal</a></li>
-		</ul>
-		<!-- Enlaces de redes sociales -->
-		<ul id="list_rrss">
-			<li><a href="#" target="_blank">facebook</a></li>
-			<li><a href="#" target="_blank">twitter</a></li>
-			<li><a href="#" target="_blank">youtube</a></li>
-			<li><a href="#" target="_blank">instagram</a></li>
-		</ul>
+		<div id="foot">
+			<span class="copy">COPYRIGHT &copy; Ipartek</span>
+			<!-- Enlaces de paginas estaticas -->
+			<ul id="list_paginas" class="clearfix">
+				<li><a href="#">Contacto</a></li>
+				<li><a href="#">Aviso legal</a></li>
+			</ul>
+			<!-- Enlaces de redes sociales -->
+			<ul id="list_rrss">
+				<li><a href="#" target="_blank">facebook</a></li>
+				<li><a href="#" target="_blank">twitter</a></li>
+				<li><a href="#" target="_blank">youtube</a></li>
+				<li><a href="#" target="_blank">instagram</a></li>
+			</ul>
+		</div>
 	</footer>
 
 </div> <!-- container -->
