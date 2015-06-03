@@ -73,21 +73,7 @@ header, nav, section, aside, footer{
 	background-color: white;
 }
 
-#head, nav{
-	position: fixed;
-	left: auto;
-	background-color: white;
-}
-#head{
-	width: 921px;
-	top: 0px;
-}
-nav{
-	top: 180px;
-}
-#content {
-	padding-top: 210px;
-}
+
 
 a{
 	text-decoration: none;  
@@ -133,34 +119,12 @@ article h2{
 	Regla con selector por CLASS para usar en todas las paginas.
 */
 
-table.tabla_azul, .tabla_azul tr, .tabla_azul td {
-    margin: 0 auto;
-	border: 1px solid grey;
-	font-size: 35px;
-	text-align: center;
-	color: #0099ff;
-	font-family: arial;
-}
-.tabla_azul th, .tabla_azul td {
-    height:50px;
-	padding: 10px;
-}
-
-.tabla_azul th {
-	color: grey;
-}
 
 .btn_volver{
 	background-color: #DDD;
 }
 
-.numero{
-	font-size: 125px;
-	color: #0099CC;
-	font-family: arial;
-	text-align: center;
-	line-height: 150px;
-}
+
 
 .encabezado{
 	margin-left: 120px;
@@ -224,26 +188,87 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	color: white;
 }
 
-.imagen{
-	width: 250px;
-	height: auto;
-}
 
 
 
 /*
 	PAGINAS
-	Una secciÃ³n por cada pagina de nuestra web.
+	Una sección por cada pagina de nuestra web.
 */
 
 
 /*****************
 		HEAD
 ******************/
+#head, nav{
+	position: fixed;
+	left: auto;
+	background-color: white;
+	z-index: 5;
+}
+#head{
+	width: 921px;
+	top: 0px;
+}
+nav{
+	top: 180px;
+}
+#content {
+	padding-top: 210px;
+}
+
 
 /*********************
 	MENU PRINCIPAL
 **********************/
+nav * {
+	padding: 0px;
+	margin: 0px;
+}
+nav {
+	margin: 0px auto;
+	width: 812px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+nav ul, nav ol {
+	list-style: none;
+}
+nav ul ul {
+	margin: 0px;
+}
+nav h2, nav h3 {
+	margin: 0px;
+}
+.menu li a, .menu li h2, .menu li h3 {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 15px;
+	display: block;
+}
+.menu li h2:hover, .menu li h3:hover, .menu li a:hover {
+	background-color: #434343;
+}
+.menu > li {
+	float: left;
+}
+.menu li ul {
+	display: none;
+	position: absolute;
+	min-width: 175px;
+}
+.menu li:hover > ul{
+	display: block;
+}
+.menu li ul li{
+	position: relative;
+}
+.menu li ul li ul{
+	right: -175px;
+	top: 0px;
+}
 
 /* NAV */
 #logo img{
@@ -253,35 +278,99 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 
 
-/* HOME */
-#home {
-
-}
-
-/* CARTELERA */
-#cartelera li h3{
-	color: #0076EC;
-	font-family: "dinengschriftstd", "Another Font", generic;
-	font-size: 25px;
-	font-weight: 500;
-	
-}
-
-#cartelera li h3:hover{
-	color: orange;
-}
-
-#cartelera ul {
-	list-style: none;   
-}
-#cartelera li {
+/*********************
+		HOME
+**********************/
+#leer, #barra_lateral {
 	float: left;
-	margin-right: 30px;  
 }
-#cartelera .clear{
-	overflow: auto;
-	zoom: 1;
+#leer {
+	width: 650px;
 }
+
+table.tabla_azul, .tabla_azul tr, .tabla_azul td {
+    margin: 0 auto;
+	border: 1px solid grey;
+	font-size: 30px;
+	text-align: center;
+	color: #0099ff;
+	font-family: arial;
+}
+.tabla_azul th, .tabla_azul td {
+    height:50px;
+	padding: 10px;
+}
+
+.tabla_azul th {
+	color: grey;
+}
+
+.numero{
+	font-size: 80px;
+	color: #0099CC;
+	font-family: arial;
+	text-align: center;
+	line-height: 80px;
+}
+
+#btn_ganador{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 34px;
+	padding: 8px 14px 9px;
+	color: #0099CC;
+}
+
+
+/*********************
+		CARTELERA
+**********************/
+	#cartelera li h3{
+		color: #0076EC;
+		font-family: "dinengschriftstd", "Another Font", generic;
+		font-size: 25px;
+		font-weight: 500;
+	}
+	#cartelera li h3:hover{
+		color: orange;
+	}
+	#cartelera ul {
+		list-style: none;   
+	}
+	#cartelera li {
+		float: left;
+		margin-right: 30px;  
+	}
+	
+	.pelicula{
+		position: relative;
+	}
+	.imagen{
+		width: 250px;
+		height: 350px;
+	}
+	.titulo {
+		position: absolute;
+		bottom: 0px;
+		text-transform: uppercase;
+		text-align: center;
+		color: green;
+		font-weight: bolder;
+		width: 240px; 
+		background-color: rgba(255,255,255,0.8);
+		margin: 0px;
+		padding: 10px 5px;	
+		display: none;
+	}
+	.pelicula:hover > .titulo {
+		display: block;
+	}
+	.titulo > span{
+		text-transform: lowercase;
+	}
+
+
 
 /* CARTELERA DETALLE */
 #cartelera_detalle  h1{
@@ -350,63 +439,6 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	color: #80ab54;
 }
 
-/* MENU DESPEGABLE */
-
-nav * {
-	padding: 0px;
-	margin: 0px;
-}
-nav {
-	margin: 0px auto;
-	width: 812px;
-	font-size: 12px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-nav ul, nav ol {
-	list-style: none;
-}
-nav ul ul {
-	margin: 0px;
-}
-nav h2, nav h3 {
-	margin: 0px;
-}
-
-.menu li a, .menu li h2, .menu li h3 {
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	padding: 10px 15px;
-	display: block;
-}
-
-.menu li h2:hover, .menu li h3:hover, .menu li a:hover {
-	background-color: #434343;
-}
-
-.menu > li {
-	float: left;
-}
-
-.menu li ul {
-	display: none;
-	position: absolute;
-	min-width: 175px;
-}
-
-.menu li:hover > ul{
-	display: block;
-}
-
-.menu li ul li{
-	position: relative;
-}
-.menu li ul li ul{
-	right: -175px;
-	top: 0px;
-}
 
 
 
@@ -417,14 +449,6 @@ nav h2, nav h3 {
 	width: 100px;
 	height: 100px;
 }
-#btn_ganador{
-	margin: 0 225px;
-	text-align: center;
-	font-size: 34px;
-	padding: 8px 14px 9px;
-	color: #0099CC;
-}
-
 
 #container{
 	width: 900px;
