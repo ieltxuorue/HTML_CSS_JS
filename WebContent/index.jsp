@@ -1,10 +1,10 @@
 <jsp:include page="plantillas/head.jsp"></jsp:include>
 <jsp:include page="plantillas/nav.jsp"></jsp:include>
 
-<div id="home">
+<div id="home" class="clearfix">
 
 	<!-- Contenido principal de la pagina -->
-	<section>		
+	<section id="leer">		
 		<h2>El afortunado en leer es:</h2>
 		<table class="tabla_azul">
 			<tr>
@@ -37,16 +37,15 @@
 		</table>
 		
 		<p class="numero" id="num_afortunado" >???</p>
-		<br>
 		<input type="button" value="Obtener nuevo afortunad@" id="btn_ganador" name="btn_ganador" onclick="obtener_ganador();" />
-		<br><br>
+		
 				
 	</section> 	
 	
-	<hr>
+
 	
 	<!-- Sidebar con contenido NO principal de la pagina -->
-	<aside>
+	<aside id="barra_lateral">
 		<h3>Enlaces de interes</h3>
 		<ul>
 			<li><a href="http://formacion.ipartek.com/campus/" target="_blank">Campus Ipartek</a></li>
