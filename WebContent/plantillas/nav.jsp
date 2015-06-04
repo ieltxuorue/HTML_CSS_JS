@@ -55,6 +55,12 @@
 						<li><a title="flotantes" href="ejemplos/CSS/posicionamiento/flotantes.jsp" > Elementos flotantes </a></li>
 					</ul>
 				</li>
+				<li><h3>Tecnicas avanzadas</h3>
+					<ul>
+						<li><a title="font icon" href="ejemplos/CSS/avanzada/font_icon.jsp" >Font Icon</a></li>
+						<li><a title="font icon" href="ejemplos/CSS/avanzada/sprite.jsp" >Sprite</a></li>
+					</ul>
+				</li>		
 			</ul>
 		</li>
 		<li><h2>Plugins</h2>
@@ -62,11 +68,7 @@
 				<li><a title="Ejemplo de plugins dataTable" href="ejemplos/plugins/datatable.jsp" >dataTables</a></li>
 			</ul>
 		</li>
-		<li><h2>Extras</h2>
-			<ul>
-				<li><a title="font icon" href="ejemplos/extras/font_icon.jsp" >Font Icon</a></li>
-			</ul>
-		</li>		
+		
 	</ul>	
 </nav>
 </header>
