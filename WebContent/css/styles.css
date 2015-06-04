@@ -204,7 +204,7 @@ article h2{
 	position: fixed;
 	left: auto;
 	background-color: white;
-	z-index: 5;
+	z-index: 100;
 }
 #head{
 	width: 921px;
@@ -226,10 +226,10 @@ nav * {
 	margin: 0px;
 }
 nav {
-	margin: 0px auto;
 	width: 812px;
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 40px;
 }
 nav ul, nav ol {
 	list-style: none;
@@ -281,13 +281,36 @@ nav h2, nav h3 {
 /*********************
 		HOME
 **********************/
+
+/*	Posicionamiento	*/
 #leer, #barra_lateral {
 	float: left;
 }
 #leer {
-	width: 650px;
+	width: 70%;
+	margin-right: 5%;
+}
+#barra_lateral {
+	width: 20%;
+	padding: 2%
 }
 
+/*	Estilo aside	*/
+#barra_lateral h3 {
+	color: #228fb8;
+	font-size: 20px;
+	border-bottom: medium;
+}
+#barra_lateral ul{
+	list-style: none;
+	margin-left: -20px;
+}
+
+/*	Estilo section	*/
+#leer h2 {
+	color: #228fb8;
+	font-size: 30px;
+}
 table.tabla_azul, .tabla_azul tr, .tabla_azul td {
     margin: 0 auto;
 	border: 1px solid grey;
@@ -300,11 +323,9 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
     height:50px;
 	padding: 10px;
 }
-
 .tabla_azul th {
 	color: grey;
 }
-
 .numero{
 	font-size: 80px;
 	color: #0099CC;
@@ -312,63 +333,86 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	text-align: center;
 	line-height: 80px;
 }
-
-#btn_ganador{
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 34px;
-	padding: 8px 14px 9px;
-	color: #0099CC;
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
 
 
 /*********************
 		CARTELERA
-**********************/
-	#cartelera li h3{
-		color: #0076EC;
-		font-family: "dinengschriftstd", "Another Font", generic;
-		font-size: 25px;
-		font-weight: 500;
-	}
-	#cartelera li h3:hover{
-		color: orange;
-	}
-	#cartelera ul {
-		list-style: none;   
-	}
-	#cartelera li {
-		float: left;
-		margin-right: 30px;  
-	}
-	
-	.pelicula{
-		position: relative;
-	}
-	.imagen{
-		width: 250px;
-		height: 350px;
-	}
-	.titulo {
-		position: absolute;
-		bottom: 0px;
-		text-transform: uppercase;
-		text-align: center;
-		color: green;
-		font-weight: bolder;
-		width: 240px; 
-		background-color: rgba(255,255,255,0.8);
-		margin: 0px;
-		padding: 10px 5px;	
-		display: none;
-	}
-	.pelicula:hover > .titulo {
-		display: block;
-	}
-	.titulo > span{
-		text-transform: lowercase;
-	}
+**********************/	
+#cartelera ul {
+	list-style: none;   
+}
+#cartelera li {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 30px;  
+}
+#cartelera li:nth-child(3n){
+	margin-right: 0px;
+}
+
+.pelicula{
+	position: relative;
+}
+.imagen{
+	width: 250px;
+	height: 350px;
+}
+.titulo {
+	position: absolute;
+	bottom: 0px;	
+	width: 240px; 
+	background-color: rgba(255,255,255,0.8);
+	margin: 0px;
+	padding: 0px 5px;
+	min-height: 100px;
+	display: none;
+}
+.titulo h3 {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	color: green;
+	font-weight: bolder;
+}
+.titulo p {
+	font-size: 12px;
+	text-transform: capitalize;
+	text-align: left;
+	color: green;
+}
+#cartelera .pelicula:hover .titulo {
+	display: block;
+}
+.titulo > span{
+	text-transform: lowercase;
+}
 
 
 
