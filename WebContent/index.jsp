@@ -56,6 +56,7 @@
 			<li><a href="https://librosweb.es/libro/pro_git/" target="_blank">Pro Git, el libro oficial de Git</a></li>
 			<li><a href="https://librosweb.es/libro/css/" target="_blank">CSS Básico</a></li>
 			<li><a href="https://librosweb.es/libro/css_avanzado" target="_blank">CSS Avanzado</a></li>
+			<li><a href="http://apps.pixlr.com/editor/" target="_blank">Photoshop Online</a></li>
 			<li><a href="http://es.lipsum.com" target="_blank">lorem ipsum</a></li>
 		</ul>
 	</aside>
