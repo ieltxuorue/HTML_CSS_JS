@@ -78,10 +78,14 @@ header, nav, section, aside, footer{
 a{
 	text-decoration: none;  
 }
-
 a:hover{
 	color: orange;
 }
+
+/* Recomendable para un CSS de impresion 
+	
+	a:after { content: "->" attr(href) "--||"; }
+*/
 
 form input[type="text"]:required:valid{
 	border: 2px solid green;
