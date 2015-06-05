@@ -1,36 +1,5 @@
 	</div> <!-- content -->
-	<style>
-		.copy, #list_paginas, #list_rrss{
-			float: left;
-		}
-		#list_paginas li, #list_rrss li {
-			float: left;	
-			text-decoration: none;
-		}
-		
-		#list_paginas, #list_rrss {
-			list-style: none;
-			margin: 0px;
-		}
-		
-		#foot{
-			margin: 0px auto;
-			width: 719px;
-			font-size: 15px;
-			font-family: Arial, Helvetica, sans-serif;
-			background-color: black;
-		}
-		#list_paginas li a, #list_rrss li a, .copy{
-			background-color: white;
-			color: black;
-			text-decoration: none;
-			text-align: center;
-			padding: 10px 10px;
-			display: block;
-		}
-		
-	</style>
-	
+
 	<footer>
 		<div id="foot">
 			<span class="copy">COPYRIGHT &copy; Ipartek</span>
@@ -40,12 +9,20 @@
 				<li><a href="#">Aviso legal</a></li>
 			</ul>
 			<!-- Enlaces de redes sociales -->
-			<ul id="list_rrss">
-				<li><a href="#" target="_blank">facebook</a></li>
-				<li><a href="#" target="_blank">twitter</a></li>
-				<li><a href="#" target="_blank">youtube</a></li>
-				<li><a href="#" target="_blank">instagram</a></li>
-			</ul>
+			<ul id="list_rrss" class="clearfix">
+				<li class="facebook">
+					<a rel="nofollow" href="http://www.facebook.com/#" target="_blank" title="Facebook"></a>
+				</li>
+				<li class="twitter">
+					<a rel="nofollow" href="http://www.twitter.com/#" target="_blank" title="Twitter"></a>
+				</li>
+				<li class="youtube">
+					<a rel="nofollow" href="http://www.youtube.com/#" target="_blank" title="YouTube"></a>
+				</li>
+				<li class="instagram">
+					<a rel="nofollow" href="http://www.instagram.com/#" target="_blank" title="Instagram"></a>
+				</li>
+			</ul> 
 		</div>
 	</footer>
 
