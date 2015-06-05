@@ -2,25 +2,28 @@
 
 	<footer>
 		<div id="foot">
+			<!-- Copyright -->
 			<span class="copy">COPYRIGHT &copy; Ipartek</span>
+			
 			<!-- Enlaces de paginas estaticas -->
 			<ul id="list_paginas" class="clearfix">
 				<li><a href="#">Contacto</a></li>
 				<li><a href="#">Aviso legal</a></li>
 			</ul>
+			
 			<!-- Enlaces de redes sociales -->
 			<ul id="list_rrss" class="clearfix">
 				<li class="facebook">
-					<a rel="nofollow" href="http://www.facebook.com/#" target="_blank" title="Facebook"></a>
+					<a href="http://www.facebook.com/#" target="_blank" title="Facebook"></a>
 				</li>
 				<li class="twitter">
-					<a rel="nofollow" href="http://www.twitter.com/#" target="_blank" title="Twitter"></a>
+					<a href="http://www.twitter.com/#" target="_blank" title="Twitter"></a>
 				</li>
 				<li class="youtube">
-					<a rel="nofollow" href="http://www.youtube.com/#" target="_blank" title="YouTube"></a>
+					<a href="http://www.youtube.com/#" target="_blank" title="YouTube"></a>
 				</li>
 				<li class="instagram">
-					<a rel="nofollow" href="http://www.instagram.com/#" target="_blank" title="Instagram"></a>
+					<a href="http://www.instagram.com/#" target="_blank" title="Instagram"></a>
 				</li>
 			</ul> 
 		</div>
