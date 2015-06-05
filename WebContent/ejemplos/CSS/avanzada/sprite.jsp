@@ -2,29 +2,21 @@
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 
 <style>
-	#sprite_ejemplo {
+	#sprite_ejemplo li {
+		background: url(img/sprite.png) no-repeat 0 0;
+		padding: 15px 50px;
+		border: 1px solid #DDD;
 		list-style: none;
 	}
-	#sprite_ejemplo li {
-		background-image     : url(img/sprite.png);
-		background-color      : transparent;
-		background-repeat    : no-repeat;
-		height: 50px;
-		width: 50px;
-		display: block;
+	
+	#sprite_ejemplo .pacman {
+		background-position: 0 0;
 	}
-	#sprite_ejemplo span {
-		padding-top: 20px;
-		padding-left: 50px;
+	#sprite_ejemplo .fantasma {
+		background-position: 0 -50px;
 	}
-	.pacman {
-		background-position  : 0px 0px;
-	}
-	.fantasma {
-		background-position  : 0px -50px;
-	}
-	.robot {
-		background-position  : 0px -100px;
+	#sprite_ejemplo .robot {
+		background-position: 0 -100px;
 	}
 	
 </style>
@@ -36,15 +28,13 @@
 		</header>
 		<div class="cnt_article">
 			<ul id="sprite_ejemplo">
-				<li class="pacman"><span>pacman</span></li>
-				<li class="fantasma"><span>fantasma</span></li>
-				<li class="robot"><span>robot</span></li>
+				<li class="pacman">pacman</li>
+				<li class="fantasma">fantasma</li>
+				<li class="robot">robot</li>
 			</ul>
 		</div>
-		
-		<footer>
-			
-			<p></p>
+		<footer>	
+			<p>Campus: <a href="http://www.formacion.ipartek.com/campus/mod/resource/view.php?id=2792" target="_blank">Sprite</a></p>
 		</footer>
 	</article>
 	
