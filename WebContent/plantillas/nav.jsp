@@ -57,8 +57,9 @@
 				</li>
 				<li><h3>Tecnicas avanzadas</h3>
 					<ul>
-						<li><a title="font icon" href="ejemplos/CSS/avanzada/font_icon.jsp" >Font Icon</a></li>
+						<li><a title="font icon" href="ejemplos/CSS/avanzada/font_awesome.jsp" >Font awesome</a></li>
 						<li><a title="font icon" href="ejemplos/CSS/avanzada/sprite.jsp" >Sprite</a></li>
+						<li><a title="font icon" href="ejemplos/CSS/avanzada/font_icon.jsp" >Font Icon</a></li>
 					</ul>
 				</li>		
 			</ul>

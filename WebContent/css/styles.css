@@ -141,6 +141,9 @@ article h2{
 .rosa {
 	color: pink;
 }
+.azul {
+	color: blue;
+}
 
 .cartel{
 	float: left;
@@ -218,7 +221,8 @@ nav{
 	top: 180px;
 }
 #content {
-	padding-top: 210px;
+	padding-top: 230px;
+	padding-bottom: 1px;
 }
 
 

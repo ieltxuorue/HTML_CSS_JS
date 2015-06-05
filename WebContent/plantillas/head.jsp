@@ -14,6 +14,7 @@
 	
 	<!-- ?v=  Para pasar un parametro. FUNCION => Para obligar al navegador a descargar el ultimo estilo. -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css?v=20150518_1.0">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.css">
   
 	<!-- icono pestaña -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
