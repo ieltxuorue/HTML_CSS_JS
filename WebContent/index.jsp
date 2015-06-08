@@ -63,7 +63,7 @@
 
 </div> <!-- home -->			
 		
-	<script src="js/index.js" type="text/javascript" ></script>
+	<script type="text/javascript" src="js/index.js"></script>
 	
 	<!-- Sustituye el <body onload="init()"> -->
 	<script>

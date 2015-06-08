@@ -41,7 +41,7 @@
 	<script src="js/tinymce-4.1.10/tinymce.min.js"></script>
 	<script>tinymce.init({selector:'textarea'});</script>
 	
-	<!-- Custom JavaScript despues de cargar todas las librerias -->
+	<!-- Custom JavaScript filtro filtrar texto en select-option -->
 	<script src="js/filter_by_text.js" ></script>
 	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->

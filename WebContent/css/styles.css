@@ -66,6 +66,7 @@ li{
 
 body {
 	/*background-image: url(http://static3.depositphotos.com/1000451/115/i/950/depositphotos_1153879-35mm-empty-film.jpg);*/
+	margin-top: 0;
 	background-image: url('../img/back.jpg');
 }
 
@@ -214,14 +215,14 @@ article h2{
 	z-index: 100;
 }
 #head{
-	width: 921px;
+	width: 920px;
 	top: 0px;
 }
 nav{
 	top: 180px;
 }
 #content {
-	padding-top: 230px;
+	padding-top: 215px;
 	padding-bottom: 1px;
 }
 
@@ -234,10 +235,9 @@ nav * {
 	margin: 0px;
 }
 nav {
-	width: 812px;
+	width: 920px;
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
-	padding-left: 40px;
 }
 nav ul, nav ol {
 	list-style: none;

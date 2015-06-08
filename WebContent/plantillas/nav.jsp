@@ -69,7 +69,16 @@
 				<li><a title="Ejemplo de plugins dataTable" href="ejemplos/plugins/datatable.jsp" >dataTables</a></li>
 			</ul>
 		</li>
-		
+		<li><h2>JavaScript</h2>
+			<ul>
+				<li><h3>Básicos</h3>
+					<ul>
+						<li><a title="Ejemplo introductorio de JavaScript" href="ejemplos/javascript/introduccion.jsp" >Introducción</a></li>
+						<li><a title="Ejemplo de calculadora en JavaScript" href="ejemplos/javascript/calculadora.jsp" >Calculadora</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
 	</ul>	
 </nav>
 </header>
