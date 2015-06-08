@@ -1,10 +1,5 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
-
-<hr>
 
 <section>
 		<h1>Ejemplo de la etiqueta time</h1>
@@ -18,7 +13,5 @@
 			<p>El curso terminar&aacute; el<time datetime="2015-11-06 13:30"> 6 de noviembre.</time></p>
 			
 </section>
-
-<hr>
-				
+			
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

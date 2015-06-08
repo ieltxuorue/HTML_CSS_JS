@@ -1,10 +1,5 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
-
-<hr>
 
 <section>
 	<h1 id="ej1">Ejemplo de etiquetas de Linea y Bloque</h1>
@@ -12,9 +7,6 @@
 	<p style="border:5px red solid;">'block' = &lt;p&gt;</p>
 			<!-- Elemento de Linea 'inline', solo ocupa su contenido -->
 	<span style="border:5px blue solid;">'inline' = &lt;span&gt;</span>
-
 </section>
-
-<hr>	
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

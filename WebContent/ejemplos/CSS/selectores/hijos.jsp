@@ -1,4 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
+<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 
 <style>
 	div a{
@@ -8,12 +9,6 @@
 		color: red;
 	}	
 </style>
-
-<hr>
-<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
-
-
 
 <section>
 	<article>
@@ -38,7 +33,5 @@
 	
 
 </section>
-
-<hr>	
 
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>

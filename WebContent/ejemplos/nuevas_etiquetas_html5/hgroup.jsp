@@ -1,10 +1,5 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
-
-<hr>
 
 <section>	
 	<article>
@@ -22,7 +17,5 @@
 			<p>Integer in metus id velit pretium tincidunt. Ut elit dui, posuere eu nisl sed, pretium sollicitudin lacus. Sed a faucibus purus, vel sagittis metus. Aliquam facilisis euismod massa, in ornare nisi porttitor ut. Morbi posuere, tortor at elementum placerat, orci risus posuere quam, ut suscipit enim nunc a orci. Duis purus mauris, ullamcorper ut ultricies id, ultricies a erat. Mauris mauris velit, posuere eu imperdiet nec, interdum eget libero. Cras sed orci at augue cursus gravida. Maecenas suscipit eget lectus vitae sollicitudin. Ut sagittis velit ac enim tristique, eu condimentum turpis pharetra. Cras ultrices urna non luctus volutpat. Suspendisse potenti. Praesent aliquet ut purus vitae malesuada. Etiam ac fringilla urna.</p>
 	</article>		
 </section>
-
-<hr>
-				
+			
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

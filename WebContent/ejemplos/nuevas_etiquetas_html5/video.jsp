@@ -1,10 +1,6 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
-<hr>
 
 <section>
 		<h2>Ejemplo de la etiqueta video</h2>
@@ -28,7 +24,5 @@
 		
 		
 </section>
-
-<hr>
 				
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

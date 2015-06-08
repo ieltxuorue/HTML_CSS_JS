@@ -72,7 +72,5 @@
 	</script>
 	
 	<!-- <noscript> en la cabezera para leer lo primero -->
-	
-<hr>
 
 <jsp:include page="plantillas/foot.jsp"></jsp:include>

@@ -1,6 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
 
 <style>
 	article footer p, article header h2 {
@@ -35,10 +34,7 @@
 	    color: maroon;
 	    float: left;
 	    margin: 10px;
-	}
-	
-
-	
+	}	
 </style>
 
 <section>
@@ -104,6 +100,5 @@
 		</footer>
 	</article>
 </section>
-
-<hr>	
+	
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>

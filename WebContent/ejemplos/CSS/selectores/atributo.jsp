@@ -1,4 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
+<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 
 <style>
 	p[class="texto"]{ 
@@ -20,12 +21,6 @@
 		background-color: #dbd6d6;
 	}	
 </style>
-
-<hr>
-<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
-
-
 
 <section>
 	<h1>Selectores de Atributo</h1>
@@ -126,7 +121,5 @@
 	</article>
 
 </section>
-
-<hr>	
 
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>

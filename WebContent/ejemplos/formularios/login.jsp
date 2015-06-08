@@ -1,10 +1,5 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
-<hr>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
-
-<hr>
 
 <section>
 
@@ -25,8 +20,6 @@
 </form>
 
 </section>
-
-<hr>
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>
 

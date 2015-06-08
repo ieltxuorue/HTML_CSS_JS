@@ -1,4 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
+<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
 
 <style>
 	.sel::selection{
@@ -21,12 +22,6 @@
 	}
 	
 </style>
-
-<hr>
-<jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
-
-
 
 <section>
 
@@ -163,11 +158,7 @@
 			<p>La pseudo-clase :not() se utiliza para seleccionar todos los elementos que no cumplen con la condición indicada.</p>
 		</footer>
 	</article>
-	
-	
 
 </section>
-
-<hr>	
 
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>

@@ -1,7 +1,5 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
-
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
-
 
 <section>
 	<div id="cartelera_detalle">

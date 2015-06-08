@@ -1,7 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
-<hr>
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
 
 <style>
 	article footer p, article header h2 {
@@ -17,9 +15,7 @@
 	}
 	.cnt_article a {
 		border: 2px solid pink;
-	}
-	
-	
+	}	
 </style>
 
 <section>
@@ -52,11 +48,6 @@
 			<p>Capitulo 9; pagina 198</p>
 		</footer>
 	</article>
-	
-	
-
-</section>
-
-<hr>	
+</section>	
 
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>

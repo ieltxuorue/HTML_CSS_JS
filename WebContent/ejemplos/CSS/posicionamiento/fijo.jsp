@@ -1,7 +1,5 @@
 <jsp:include page="../../../plantillas/head.jsp"></jsp:include>
-<hr>
 <jsp:include page="../../../plantillas/nav.jsp"></jsp:include>
-<hr>
 
 <style>
 	article footer p, article header h2 {
@@ -78,7 +76,5 @@
 	
 
 </section>
-
-<hr>	
 
 <jsp:include page="../../../plantillas/foot.jsp"></jsp:include>
