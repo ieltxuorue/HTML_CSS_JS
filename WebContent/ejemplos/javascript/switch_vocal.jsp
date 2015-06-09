@@ -7,61 +7,36 @@
 			<h2>Vocal o no?</h2>
 		</header>
 		<div class="cnt_article">					
+			<pre>
+	var juego_datos = [ "a", "e", "A", 13, null, undefined, 0.5, "and", "n", "ñ", "O" ];
+
+	function es_vocal ( letra ){
+		var vocal = false;
+		
+		switch ( letra ) {
+			case "a": 
+			case "A": 
+			case "e": 
+			case "E": 
+			case "i": 
+			case "I": 
+			case "o": 
+			case "O": 
+			case "u": 
+			case "U": 
+				vocal = true;
+				break;			
+		}
+
+		return vocal;
+	}
+
+	for ( var i=0; i&#60;juego_datos.length; i++){
+		console.info( juego_datos[i] + ', es vocal? ' + es_vocal(juego_datos[i]) );
+	}
 			
-			<script>
-								
-				/**
-					Ejemplo de uso de un switch-case. 
-					Funci�n para saber si una letra es vocal o no?
-				*/
-				var juego_datos = [	"a", "e", "A", 13, null, undefined, 0.5, "and", "n", "\u00f1", "O" ];
-				
-				function es_vocal ( letra ){
-					var vocal = false;
-						
-					switch ( letra ) {
-						case "a": 
-							vocal = true;
-							break;
-						case "A": 
-							vocal = true;
-							break;
-						case "e": 
-							vocal = true;
-							break;
-						case "E": 
-							vocal = true;
-							break;
-						case "i": 
-							vocal = true;
-							break;
-						case "I": 
-							vocal = true;
-							break;
-						case "o": 
-							vocal = true;
-							break;
-						case "O": 
-							vocal = true;
-							break;
-						case "u": 
-							vocal = true;
-							break;
-						case "U": 
-							vocal = true;
-							break;
-						default:
-							vocal = false;				
-					}
-					
-					return vocal;
-				}
-				
-				for ( var i=0; i<juego_datos.length; i++){
-					console.info( juego_datos[i] + ', es vocal? ' + es_vocal(juego_datos[i]) );
-				}
-				
-			</script>
+			</pre>
+			
 			
 		</div> <!-- cnt_article -->
 		<footer>
@@ -70,5 +45,43 @@
 	</article>
 
 </section>
+
+<script>
+								
+	/**
+		Ejemplo de uso de un switch-case. 
+		Función para saber si una letra es vocal o no?
+			@param letra: letra a comprobar
+			@return: true si es vocal, false en caso contrario
+	*/
+	var juego_datos = [	"a", "e", "A", 13, null, undefined, 0.5, "and", "n", "\u00f1", "O" ];
+	
+	function es_vocal ( letra ){
+		var vocal = false;
+					
+		switch ( letra ) {
+			case "a": 
+			case "A": 
+			case "e": 
+			case "E": 
+			case "i": 
+			case "I": 
+			case "o": 
+			case "O": 
+			case "u": 
+			case "U": 
+				vocal = true;
+				break;			
+		}
+		
+		return vocal;
+	}
+	
+	for ( var i=0; i<juego_datos.length; i++){
+		console.info( juego_datos[i] + ', es vocal? ' + es_vocal(juego_datos[i]) );
+	}
+	
+</script>
+
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>
