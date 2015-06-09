@@ -1,102 +1,79 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
+<style>
+	.calculadora {
+		border: 1px solid grey;
+		border-spacing: 5px;
+		background-color: grey;
+		float: left;
+	}
+	.calculadora:first-child {
+		margin-left: 130px;
+		margin-right: 30px;
+	}
+	.calculadora tr, .calculadora td {
+		width: 100px;
+		height: 100px;
+		border: 1px solid #88ABCB;
+		background-color: #88ABCB;
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+	}
+	.calculadora td:active {
+		background-color: #779ABA;
+		color: blue;
+	}
+</style>
+			
 <section>
 	<article>
 		<header>
-			<h2>Introduccion</h2>
+			<h2>Calculadora</h2>
 		</header>
-		<div class="cnt_article">					
+		<div class="cnt_article clearfix">					
+			<table class="calculadora">
+				<tr>
+					<td data-key="number" data-value="1" >1</td>
+					<td data-key="number" data-value="2" >2</td>  
+					<td data-key="number" data-value="3" >3</td>
+				</tr>
+				<tr>
+					<td data-key="number" data-value="4" >4</td>
+					<td data-key="number" data-value="5" >5</td> 
+					<td data-key="number" data-value="6" >6</td>		
+				</tr>
+				<tr>
+					<td data-key="number" data-value="7" >7</td>
+					<td data-key="number" data-value="8" >8</td> 
+					<td data-key="number" data-value="9" >9</td>		
+				</tr>
+				<tr>
+					<td data-key="coma" data-value="." >.</td>
+					<td data-key="number" data-value="0" >0</td> 
+					<td data-key="result" data-value="=" >=</td>
+				</tr>
+			</table>
+			<table class="calculadora">
+				<tr>
+					<td data-key="operation" data-value="+" >+</td>
+					<td data-key="operation" data-value="-" >-</td>
+				</tr>
+				<tr>
+					<td data-key="operation" data-value="*" >*</td>
+					<td data-key="operation" data-value="/" >/</td>		
+				</tr>
+				<tr>
+					<td data-key="operation" data-value="%" >%</td>
+					<td data-key="operation" data-value="par" >PAR</td>		
+				</tr>
+				<tr>
+					<td data-key="operation" data-value="inc" >INC</td>
+					<td data-key="operation" data-value="dec" >DEC</td>
+				</tr>
+			</table>
 			
-			<script>
-				//declaracion variables globales
-				var cantidad1 = 45;
-				var cantidad2 = 20;
-				
-				/**
-					Funcion para sumar dos parametros y retomar la suma de ambos
-				*/
-				function sumar( parametro1, parametro2 ) {
-					//declaracion variables locales
-					var resultado;		//undefined
-					
-					//sumar parametros y guardar en la variable
-					resultado = parametro1 + parametro2;
-					
-					//retorno del valor
-					return resultado;	
-				}
-				
-				
-				//definir operaciones para l calculadora
-				const SUMAR 		= 0;
-				const RESTAR 		= 1;
-				const MULTIPLICAR 	= 2;
-				const DIVIDIR 		= 3;
-				const MODULO 		= 4;
-				//operaciones para el parametro1
-				const INCREMENTO 	= 5;
-				const DECREMENTO 	= 6;
-				const ES_PAR		= 7;	//true si es par, false en caso contrario
-				
-				/**
-					Calcula la operacion solicitada para los dos parametros
-				*/
-				function calculadora ( parametro1, parametro2, operacion ){
-					var resultado = null;		
-									
-					//realizar operacion solicitada
-					if( operacion == SUMAR ){
-						resultado = parametro1 + parametro2;
-					}
-					if( operacion == RESTAR ){
-						resultado = parametro1 - parametro2;
-					}
-					if( operacion == MULTIPLICAR ){
-						resultado = parametro1 * parametro2;
-					}
-					if( operacion == DIVIDIR ){
-						resultado = parametro1 / parametro2;
-					}
-					if( operacion == MODULO ){
-						resultado = parametro1 % parametro2;
-					}
-					
-					
-					if( operacion == INCREMENTO ){
-						parametro1++;
-						resultado = parametro1;
-					}
-					if( operacion == DECREMENTO ){
-						parametro1--;
-						resultado = parametro1;
-					}
-					if( operacion == ES_PAR ){
-						if( parametro1 % 2 == 0 ){
-							resultado = true;
-						}
-						else{
-							resultado = false;
-						}
-					}
-						
-					return resultado;	
-				}
-				
-				console.info('Calculadora \n')
-				
-				console.info('5 + 5 = ' + calculadora( 5, 5, SUMAR ) );
-				console.info('10 - 67 = ' + calculadora( 10, 67, RESTAR ) );
-				console.info('5 * 5 = ' + calculadora( 5, 5, MULTIPLICAR ) );
-				console.info('67 / 10 = ' + calculadora( 67, 10, DIVIDIR ) );
-				console.info('El modulo de 67 % 10 es ' + calculadora( 67, 10, MODULO ) );
-				
-				console.info('Incrementar 10 => ' + calculadora( 10, null, INCREMENTO ) );
-				console.info('Decrementar 10 => ' + calculadora( 10, null, DECREMENTO ) );
-				console.info('10 ¿Es par? => ' + calculadora( 10, null, ES_PAR ) );
-				console.info('7 ¿Es par? => ' + calculadora( 7, null, ES_PAR ) );
-					
-			</script>
 			
 		</div> <!-- cnt_article -->
 		<footer>
@@ -105,5 +82,80 @@
 	</article>
 
 </section>
+
+<script>		
+	//definir operaciones para la calculadora
+	const SUMAR 		= 0;
+	const RESTAR 		= 1;
+	const MULTIPLICAR 	= 2;
+	const DIVIDIR 		= 3;
+	const MODULO 		= 4;
+	//operaciones para el parametro1
+	const INCREMENTO 	= 5;
+	const DECREMENTO 	= 6;
+	const ES_PAR		= 7;	//true si es par, false en caso contrario
+	const RAIZ			= 8;
+	
+	/**
+		Calcula la operacion solicitada para los dos parametros
+	*/
+	function calculadora ( parametro1, parametro2, operacion ){
+		var resultado = null;		
+						
+		//realizar operacion solicitada
+		if( operacion == SUMAR ){
+			resultado = parametro1 + parametro2;
+			console.info('\t ' + parametro1 + ' + ' + parametro2 + ' = ' + resultado );
+		}else if( operacion == RESTAR ){
+			resultado = parametro1 - parametro2;
+			console.info('\t ' + parametro1 + ' - ' + parametro2 + ' = ' + resultado );
+		}else if( operacion == MULTIPLICAR ){
+			resultado = parametro1 * parametro2;
+			console.info('\t ' + parametro1 + ' * ' + parametro2 + ' = ' + resultado );
+		}else if( operacion == DIVIDIR ){
+			resultado = parametro1 / parametro2;
+			console.info('\t ' + parametro1 + ' / ' + parametro2 + ' = ' + resultado );
+		}else if( operacion == MODULO ){
+			resultado = parametro1 % parametro2;
+			console.info('\t El modulo (%) de ' + parametro1 + ' / ' + parametro2 + ' es ' + resultado );
+		}else if( operacion == INCREMENTO ){
+			parametro1++;
+			resultado = parametro1;
+			console.info('\t Incrementar ' + (parametro1 -= 1) + '++ => ' + resultado );
+		}else if( operacion == DECREMENTO ){
+			parametro1--;
+			resultado = parametro1;
+			console.info('\t Decrementar ' + (parametro1 += 1) + '-- => ' + resultado );
+		}else if( operacion == ES_PAR ){
+			if( parametro1 % 2 == 0 ){
+				resultado = true;
+				console.info('\t ' + parametro1 + ' ¿Es par? => ' + resultado );
+			}
+			else{
+				resultado = false;
+				console.info('\t ' + parametro1 + ' ¿Es par? => ' + resultado + ', es impar.' );
+			}
+		}else {
+			console.error('Operación no soportada');
+		}
+			
+		return resultado;	
+	}
+	
+	console.info('Calculadora:');
+	
+	calculadora( 5, 5, SUMAR ) ;
+	calculadora( 10, 67, RESTAR );
+	calculadora( 5, 5, MULTIPLICAR );
+	calculadora( 67, 10, DIVIDIR );
+	calculadora( 67, 10, MODULO );
+	
+	calculadora( 10, null, INCREMENTO );
+	calculadora( 10, null, DECREMENTO );
+	calculadora( 10, null, ES_PAR );
+	calculadora( 7, null, ES_PAR );
+	calculadora( 100, null, RAIZ );
+		
+</script>
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>
