@@ -76,6 +76,7 @@
 						<li><a title="Ejemplo introductorio de JavaScript" href="ejemplos/javascript/introduccion.jsp" >Introducción</a></li>
 						<li><a title="Ejemplo de calculadora en JavaScript" href="ejemplos/javascript/calculadora.jsp" >Calculadora</a></li>
 						<li><a title="Ejemplo de switch vocal" href="ejemplos/javascript/switch_vocal.jsp" >Vocal?</a></li>
+						<li><a title="Testear " href="ejemplos/javascript/test.jsp">TEST</a></li>
 					</ul>
 				</li>
 			</ul>
