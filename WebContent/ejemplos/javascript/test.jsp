@@ -88,8 +88,8 @@
 	    	// Si pongo jonWayne.reverse()[1] ejecutaría reverse de nuevo y lo dejaría como estaba
 	    	assert.ok ( jonWayne[2] == "Jon" , 'array.reverse() Posición 2 está "Jon"' );
 	    	
-	    	var numeros = new Array (-5, 5, 3, 1, 0);
-	    	var numerosOrdenados=new Array;
+	    	var numeros = new Array (-5, 5, 3, 1, 0); //Constructor de array con valores iniciales.
+	    	var numerosOrdenados=new Array;	//Constructor de array vacio.
 	    	numerosOrdenados=numeros.sort();
 	    	assert.ok ( numerosOrdenados[0] == -5 , 'Números ordenados de menor a mayor: 1º -5' );
 	    	assert.ok ( numerosOrdenados[1] == 0 , '2º 0' ); // Si pongo numeros.sort()[1] ejecutaría sort de nuevo
