@@ -74,9 +74,18 @@
 				<li><h3>Básicos</h3>
 					<ul>
 						<li><a title="Ejemplo introductorio de JavaScript" href="ejemplos/javascript/introduccion.jsp" >Introducción</a></li>
+						<li><a title="Ejemplo de objetos de JavaScript" href="ejemplos/javascript/objetos.jsp" >Objetos</a></li>
+					</ul>
+				</li>
+				<li><h3>Plugins</h3>
+					<ul>
 						<li><a title="Ejemplo de calculadora en JavaScript" href="ejemplos/javascript/calculadora.jsp" >Calculadora</a></li>
 						<li><a title="Ejemplo de switch vocal" href="ejemplos/javascript/switch_vocal.jsp" >Vocal?</a></li>
-						<li><a title="Testear" target="_blank" href="ejemplos/javascript/test.jsp">TEST</a></li>
+					</ul>
+				</li>
+				<li><h3>TEST</h3>
+					<ul>
+						<li><a title="Testear" target="_blank" href="ejemplos/javascript/test.jsp">Qunit</a></li>
 					</ul>
 				</li>
 			</ul>
