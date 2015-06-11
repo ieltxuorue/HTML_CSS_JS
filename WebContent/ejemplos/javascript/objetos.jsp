@@ -15,7 +15,7 @@
 				</li>
 				<li>
 					<strong>name:</strong>
-					<span id="w_name"><code>document.title</code> para el nombre de la pestaña</span>
+					<span><mark id="w_name"></mark></span><code>document.title</code> para el nombre de la pestaña
 				</li>
 				<li>
 					<strong>window.open():</strong>
@@ -26,15 +26,12 @@
 				var span_location = document.getElementById('w_location');
 				span_location.innerHTML = window.location;
 				//document.getElementById('w_location').innerHTML = window.location;
-				/*
-					document.getElementById('w_name').innerHTML = window.name; // Esta vacio.
-				
-				*/
+				document.getElementById('w_name').innerHTML = window.name; // Esta vacio.
 				
 				var btn_w_open =  document.getElementById('w_open');
 				btn_w_open.onclick = function () {
 					console.info('Hemos hecho click');
-					window.open("https://github.com/", "GitHub", "height=200px, width=500px" );
+					window.open("http://localhost:8080/HolaMundoIeltxu/ejemplos/javascript/objetos.jsp", "w_open", "height=200px, width=500px" );
 				}
 			</script>
 			<p>Capitulo 13; pagina 306</p>
