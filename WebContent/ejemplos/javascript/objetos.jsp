@@ -31,10 +31,16 @@
 				<li>
 					<strong>window.open():</strong>
 					<input type="button" id="w_open" value="window.open(url,nombe,opciones)">
+					<code>* Chrome no funciona resizable=no hacerlo mediante JavaScript.</code>
 				</li>
 				<li>
 					<strong>window.close():</strong>
 					<input type="button" id="w_close" value="window.close()">
+					<code>Scripts may close only the windows that were opened by it.</code>
+				</li>
+				<li>
+					<strong>window.alert():</strong>
+					<input type="button" id="w_alert" value="window.alert(mensaje)">
 				</li>
 				<li>
 					<strong>window.confirm():</strong>
@@ -63,7 +69,11 @@
 				//Metodo close()
 				document.getElementById('w_close').onclick = function () {
 					window.close();				
-				}				
+				}	
+				//Metodo alert()
+				document.getElementById('w_alert').onclick = function () {	
+						window.alert("Mensaje del alert, actualmente esta desaconsejado su utilizacion");			
+				}
 				//Metodo confirm()
 				document.getElementById('w_confirm').onclick = function () {
 					if (window.confirm ("¿Quieres continuar?") == true){
@@ -93,7 +103,7 @@
 				</li>
 				<li>
 					<strong>images:</strong>
-					<input type="button" id="d_images" value="document.images[]">
+					<input type="button" id="d_images" value="document.images[ ]">
 					<input type="button" id="ocultar_images" value="ocultar">
 					<div id="list_images">
 						<ul>
@@ -107,12 +117,12 @@
 				</li>
 				<li>
 					<strong>links:</strong>
-					<input type="button" id="d_links" value="document.links[]">
+					<input type="button" id="d_links" value="document.links[ ]">
 					<input type="button" id="ocultar_links" value="ocultar">
 					<div id="list_links">
 						<ul>
 							<%
-								for(int i=0;i<50;i++){
+								for(int i=0;i<5;i++){
 									out.print("<li id='link_" + i + "'></li>");
 								}
 							%>
@@ -227,12 +237,12 @@
 					<span id="s_availHeight"></span>
 				</li>
 				<li>
-					<strong>availWidth:</strong>
-					<span id="s_availWidth"></span>
-				</li>
-				<li>
 					<strong>height:</strong>
 					<span id="s_height"></span>
+				</li>
+				<li>
+					<strong>availWidth:</strong>
+					<span id="s_availWidth"></span>
 				</li>
 				<li>
 					<strong>width:</strong>
