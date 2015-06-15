@@ -41,10 +41,10 @@
 			assert.ok( precio_entrada("Domingo",27) == 10, "Domingo = 10€" );
 			
 			//Parametros incorrectos
-			assert.ok( precio_entrada('domingo',-30) == "El dia o la edad no son correctos", "domingo (-30) años dato incorrecto");		  
-			assert.ok( precio_entrada('vernes',30) == "El dia o la edad no son correctos", "vernes 30 años dato incorrecto");
-			assert.ok( precio_entrada(null,30) == "El dia o la edad no son correctos", "null 30 años dato incorrecto");
-			assert.ok( precio_entrada('undefined' ,30) == "El dia o la edad no son correctos", "null 30 años dato incorrecto");
+			assert.ok( precio_entrada('domingo',-30) == "El dia o la edad no son correctos", "edad (-30) años, dato incorrecto");		  
+			assert.ok( precio_entrada('vernes',30) == "El dia o la edad no son correctos", "dia vernes, dato incorrecto");
+			assert.ok( precio_entrada(null,30) == "El dia o la edad no son correctos", "dia null, dato incorrecto");
+			assert.ok( precio_entrada('undefined',30) == "El dia o la edad no son correctos", "dia 'undefined', dato incorrecto");
 		});
 			
 		QUnit.test( "es_par (numero)", function( assert ) {

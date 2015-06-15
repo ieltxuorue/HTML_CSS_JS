@@ -194,6 +194,9 @@
 			case "domingo":
 				precio = 10;	
 				break;
+			default:
+				precio = 'El dia o la edad no son correctos';
+				break;
 		}
 		
 		return precio;

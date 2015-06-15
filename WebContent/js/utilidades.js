@@ -11,54 +11,61 @@ var edad = 100;
 function precio_entrada ( diaSemana, edad ){
 var precio = 0;
 
-diaSemana = diaSemana.toLowerCase();
+if (edad <= 0 || diaSemana == null){
+	precio = 'El dia o la edad no son correctos';
+}else{
 	
-switch ( diaSemana ) {
-	case "lunes": 
-		if ( edad <= 35){
-			precio = 2;
-		}
-		else{
-			precio = 5;
-		}
-		break;
-	case "martes": 
-		if ( edad <= 25){
-			precio = 2;
-		}
-		else if ( edad > 25 && edad <= 50 ){
-			precio = 5;
-		}
-		else{
-			precio = 7;
-		}
-		break;
-	case "miercoles": 
-		if ( edad <= 18){
-			precio = 3;
-		}
-		else if ( edad > 18 && edad <= 50 ){
-			precio = 5;
-		}
-		else{
-			precio = 8;
-		}
-		break;
-	case "jueves": 
-		if ( edad <= 18){
-			precio = 5;
-		}
-		else{
-			precio = 7;
-		}
-		break;
-	case "viernes":
-	case "sabado":
-	case "domingo":
-		precio = 10;	
-		break;
+	diaSemana = diaSemana.toLowerCase();
+	
+	switch ( diaSemana ) {
+		case "lunes": 
+			if ( edad <= 35){
+				precio = 2;
+			}
+			else{
+				precio = 5;
+			}
+			break;
+		case "martes": 
+			if ( edad <= 25){
+				precio = 2;
+			}
+			else if ( edad > 25 && edad <= 50 ){
+				precio = 5;
+			}
+			else{
+				precio = 7;
+			}
+			break;
+		case "miercoles": 
+			if ( edad <= 18){
+				precio = 3;
+			}
+			else if ( edad > 18 && edad <= 50 ){
+				precio = 5;
+			}
+			else{
+				precio = 8;
+			}
+			break;
+		case "jueves": 
+			if ( edad <= 18){
+				precio = 5;
+			}
+			else{
+				precio = 7;
+			}
+			break;
+		case "viernes":
+		case "sabado":
+		case "domingo":
+			precio = 10;	
+			break;
+		default:
+			precio = 'El dia o la edad no son correctos';
+			break;
+	}
 }
-
 return precio;
 }
 //end:function precio_entrada(diaSemana, edad)
@@ -96,26 +103,31 @@ function convertirFecha ( date, formato ){
 	var resul = "";
 	var ames = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 	
-	var dia = date.getDate();
-	var mes = date.getMonth();
-	var ano = date.getFullYear();
+	if (date instanceof Date){
 		
-	switch (formato) {
-	case CORTO:
-		if (mes < 10){
-			resul = dia + "/0" + (mes + 1) + "/" + ano;
-		}else{
-			resul = dia + "/" + (mes + 1) + "/" + ano; 
+		var dia = date.getDate();
+		var mes = date.getMonth();
+		var ano = date.getFullYear();
+		
+		switch (formato) {
+			case CORTO:
+				if (mes < 10){
+					resul = dia + "/0" + (mes + 1) + "/" + ano;
+				}else{
+					resul = dia + "/" + (mes + 1) + "/" + ano; 
+				}
+				break;
+			case LARGO:
+					resul = dia + " de " + ames[mes] + " del " + ano; 
+				break;
+			default:
+				resul = null
+				break;
 		}
-		break;
-	case LARGO:
-			resul = dia + " de " + ames[mes] + " del " + ano; 
-		break;
-	default:
-		resul = null
-		break;
 	}
-
+	else {
+		resul = null;
+	}
 	return resul;
 }
 
