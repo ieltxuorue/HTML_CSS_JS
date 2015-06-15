@@ -111,6 +111,9 @@ function convertirFecha ( date, formato ){
 		
 		switch (formato) {
 			case CORTO:
+				if (dia < 10){
+					dia = "0" + dia;
+				}
 				if (mes < 10){
 					resul = dia + "/0" + (mes + 1) + "/" + ano;
 				}else{
