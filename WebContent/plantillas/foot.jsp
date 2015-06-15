@@ -46,10 +46,7 @@
 	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->
 	<script src="js/main.js" ></script>
-	
-	
-	
-	
+	<script src="js/utilidades.js"></script>	
 
 </body>
 </html>
