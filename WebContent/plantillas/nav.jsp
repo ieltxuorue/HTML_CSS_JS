@@ -67,6 +67,7 @@
 		<li><h2>Plugins</h2>
 			<ul>
 				<li><a title="Ejemplo de plugins dataTable" href="ejemplos/plugins/datatable.jsp" >dataTables</a></li>
+				<li><a title="Ejemplo de plugins datepicker" href="ejemplos/plugins/jqueryui.jsp" >jQueryUI</a></li>
 			</ul>
 		</li>
 		<li><h2>JavaScript</h2>
