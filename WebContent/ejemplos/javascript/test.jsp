@@ -108,10 +108,10 @@
 	    
 	    QUnit.test( "Date - Fechas", function( assert ) {
 			var fecha = new Date(2015,5,15);
-			var fecha2 = new Date(2015,11,15);
+			var fecha2 = new Date(2015,11,1);
 			
 			assert.ok (convertirFecha(fecha, CORTO) == '15/06/2015' , 'fecha corta');
-			assert.ok (convertirFecha(fecha2, CORTO) == '15/12/2015' , 'fecha corta 2');
+			assert.ok (convertirFecha(fecha2, CORTO) == '01/12/2015' , 'fecha corta 2');
 			assert.ok (convertirFecha(fecha, LARGO) == '15 de junio del 2015' , 'fecha larga');
 			assert.ok (convertirFecha(fecha, 'formato no valido') == null , 'formato no valido');
 			assert.ok (convertirFecha(null, CORTO) == null , 'fecha null');
