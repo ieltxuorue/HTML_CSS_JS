@@ -340,6 +340,97 @@
 				}
 			</script>
 			
+			<h3>Date</h3>			
+			<p>Capitulo 13; pagina 316</p>	
+			<ul>
+				<li>
+					<strong>Date:</strong>
+					<input type="button" id="d_date" value="new Date()">
+				</li>
+				<li>
+					<strong>getDate():</strong>
+					<span id="d_getdate"></span>
+				</li>
+				<li>
+					<strong>getDay():</strong>
+					<span id="d_getday"></span>
+				</li>
+				<li>
+					<strong>getHours():</strong>
+					<span id="d_gethours"></span>
+				</li>
+				<li>
+					<strong>getMinutes():</strong>
+					<span id="d_getminutes"></span>
+				</li>
+				<li>
+					<strong>getSeconds():</strong>
+					<span id="d_getseconds"></span>
+				</li>
+				<li>
+					<strong>getTime():</strong>
+					<span id="d_gettime"></span>
+				</li>
+				<li>
+					<strong>getMonth():</strong>
+					<span id="d_getmonth"></span>
+				</li>
+				<li>
+					<strong>getFullYear():</strong>
+					<span id="d_getfullyear"></span>
+				</li>
+				<li>
+					<strong>toGMTString() y toLocaleString():</strong>
+					<div id="d_toString"></div>
+				</li>
+				
+			</ul>
+			<script>
+				/****************************
+						   DATE
+				****************************/
+				//Constructor Date()
+				document.getElementById('d_date').onclick = function () {
+				var fecha = new Date();
+					
+				//Metodo getDate()
+				document.getElementById('d_getdate').innerHTML = fecha.getDate();
+					
+				//Metodo getDay()
+				document.getElementById('d_getday').innerHTML = fecha.getDay();
+				
+				//Metodo getHours()
+				document.getElementById('d_gethours').innerHTML = fecha.getHours();
+				
+				//Metodo getMinutes()
+				document.getElementById('d_getminutes').innerHTML = fecha.getMinutes();
+				
+				//Metodo getSeconds()
+				document.getElementById('d_getseconds').innerHTML = fecha.getSeconds();
+				
+				//Metodo getTime()
+				document.getElementById('d_gettime').innerHTML = fecha.getTime();
+					
+				//Metodo getMonth()
+				document.getElementById('d_getmonth').innerHTML = fecha.getMonth();
+				
+				//Metodo getFullYear()
+				document.getElementById('d_getfullyear').innerHTML = fecha.getFullYear();
+				
+				//Metodos toGMTString() y toLocaleString()
+				var fechaGMT = fecha.toGMTString();
+				var fechaLocale = fecha.toLocaleString();
+				
+				document.getElementById('d_toString').innerHTML = "<br>Fecha Actual: " + fecha
+															+ "<br> Fecha ActualGMT: " + fechaGMT
+															+ "<br> Fecha ActualLocale: " + fechaLocale
+															+ "<br> Fecha corta: " + convertirFecha(fecha,CORTO)
+															+ "<br> Fecha larga: " + convertirFecha(fecha,LARGO);
+															
+				}
+				
+			</script>
+						
 		</div> <!-- cnt_article -->
 		<footer>
 			<p>Para visualizar entrar en la console de Chrome 'ctrl+shift+i'</p>

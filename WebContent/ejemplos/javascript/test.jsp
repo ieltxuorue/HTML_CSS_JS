@@ -15,6 +15,7 @@
   	<script src="../../js/utilidades.js"></script>
   	
   	<script>
+		  	 
   		//Nuestro codigo de test
 		QUnit.test( "precio_entradas (diaSemna,edad)", function( assert ) {
 	 		assert.ok( precio_entrada("lunes",34) == 2, "lunes <35 años = 2€" );
@@ -103,9 +104,20 @@
 	    	assert.ok ( letras.sort()[2] == "b", '3º "b"' );
 	    	assert.ok ( letras.sort()[3] == "h" , '4º "h"' );
 
-
 	    });
-		
+	    
+	    QUnit.test( "Date - Fechas", function( assert ) {
+			var fecha = new Date(2015,5,15);
+			var fecha2 = new Date(2015,11,15);
+			
+			assert.ok (convertirFecha(fecha, CORTO) == '15/06/2015' , 'fecha corta');
+			assert.ok (convertirFecha(fecha2, CORTO) == '15/12/2015' , 'fecha corta 2');
+			assert.ok (convertirFecha(fecha, LARGO) == '15 de junio del 2015' , 'fecha larga');
+			assert.ok (convertirFecha(fecha, 'formato no valido') == null , 'formato no valido');
+			assert.ok (convertirFecha(null, CORTO) == null , 'fecha null');
+			assert.ok (convertirFecha(undefined, CORTO) == null , 'fecha undefined');
+			assert.ok (convertirFecha('45/ff/2020', CORTO) == null , 'fecha no correcta');
+		});
   </script>
 </body>
 </html>
