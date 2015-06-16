@@ -124,12 +124,9 @@ article h2{
 	Regla con selector por CLASS para usar en todas las paginas.
 */
 
-
 .btn_volver{
 	background-color: #DDD;
 }
-
-
 
 .encabezado{
 	margin-left: 120px;
@@ -199,6 +196,24 @@ article h2{
 .cnt_article h3{
 	color: #C10D57;
 	text-decoration: underline;
+}
+
+/* contenedor para columnas */
+.cnt_cols{
+	width: 100%;
+	border: 1px solid #DDD;
+}
+.col1, .col2 {
+	float: left;
+	width: 49%;
+	min-height: 100px;
+}
+.col1 {
+	border-right: 1px solid #DDD;
+}
+.col2 {
+	padding: 5%;
+	width: 39%;
 }
 
 

@@ -8,15 +8,23 @@
 $(function() {
 	console.debug('document ready!')
 	
+	//Asociar todos los textareas en TinyMCE
+	console.warn("TinyMCE deshabilitado");
+	//tinymce.init({selector:'textarea'});
+	//console.info('datepicker habilitado');
+	
+	
 	//Asignación del id del <select> y del id del <input type="text">
+	//console.warn("filterByText deshabilitado");
 	$('#lista_select').filterByText($('#textbox'), true);
-	console.debug('filterByText habilitado');
+	console.info('filterByText habilitado');
 	
 	//Asociar a todos los elementos con clase 'fecha' el datePicker de jQueryUI
 	//$(".fecha")..datepicker(); 
 	//Asociar a todos los elementos con input[data-widget='calendario' el datePicker de jQueryUI
+	//console.warn("datepicker deshabilitado");
 	$("input[data-widget='calendario']").datepicker(); 
-	console.debug('datepicker habilitado');
+	console.info('datepicker habilitado');
 	
 	jQuery(function($){
 		$.datepicker.regional['es'] = {

@@ -76,6 +76,7 @@
 					<ul>
 						<li><a title="Ejemplo introductorio de JavaScript" href="ejemplos/javascript/introduccion.jsp" >Introducción</a></li>
 						<li><a title="Ejemplo de objetos de JavaScript" href="ejemplos/javascript/objetos.jsp" >Objetos</a></li>
+						<li><a title="Ejemplo de eventos de JavaScript" href="ejemplos/javascript/eventos.jsp" >Eventos</a></li>
 					</ul>
 				</li>
 				<li><h3>Plugins</h3>
