@@ -4,7 +4,7 @@
 
 <head>
 
-	<base href="/HolaMundoIeltxu/">
+	<base href="<%=request.getContextPath()%>/">
 	
 	<meta charset="utf-8">
 
