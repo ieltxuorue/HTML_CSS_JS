@@ -1,7 +1,29 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
-
+<style>
+	div#no_validar{
+		border: 2px solid red;
+		color: black;
+		margin: 10px;
+		padding: 15px;
+		display: none;
+	}
+	div#no_validar span {
+		color: red;
+		font-size: 20px;
+		font-style: italic;
+		border-bottom: 1px solid red;
+		margin-bottom: 20px;
+	}
+	div#no_validar p{
+		margin: 5px 10px;
+		font-size: 12px;
+		line-height: 12px;
+		text-align: left;
+	}
+	
+</style>
 
 <section>
 	<article>
@@ -71,28 +93,97 @@
 			<div class="clearfix cnt_cols">
 				<div class="col1">
 					<textarea id="txt_area" rows="20" cols="50"></textarea>
-				</div>
+				</div> <!-- col1 -->
 				<div class="col2">
-					<input type="button" id="boton" value="pulsame">
-					<input type="text" id="txt">
-					<select id="selec">
-						<option value="bio">Bilbao</option>
-						<option value="bar">Barakaldo</option>
-					</select>
-					<p>Sexo:</p>
-					<input type="radio" name="sexo" data-value="masculino" value="M" />Masculino
-					<input type="radio" name="sexo" data-value="femenino" value="F" />Femenino
-					<input type="radio" name="sexo" data-value="indefinido" value="I" />Indefinido
-					<p>Conocimientos:</p>
-					<input type="checkbox" name="saber" data-value="HTML5" value="0" />HTML5<br>
-					<input type="checkbox" name="saber" data-value="JavaScript" value="1" />JavaScript<br>
-					<input type="checkbox" name="saber" data-value="CSS3" value="2" />CSS3<br>
-					
-					<input type="button" id="clear" value="limpiar">
-					
-				</div>
-			</div>
+					<form action="#" method="post" onsubmit="validar(this); return false;">
+						
+						<div id="no_validar"></div>
+						
+						<input type="button" id="boton" value="pulsame">
+						<input type="text" id="txt">
+						<select id="selec">
+							<option value="bio">Bilbao</option>
+							<option value="bar">Barakaldo</option>
+						</select>
+						<fieldset>
+							<legend>Sexo:</legend>
+							<input type="radio" name="sexo" data-label="masculino" value="M" /><label>Masculino</label>
+							<input type="radio" name="sexo" data-label="femenino" value="F" /><label>Femenino</label>
+							<input type="radio" name="sexo" data-label="indefinido" value="I" /><label>Indefinido</label>
+						</fieldset>
+						<fieldset>
+							<legend>Conocimientos:</legend>
+							<input type="checkbox" name="saber" data-label="HTML5" value="0" /><label>HTML5<br></label>
+							<input type="checkbox" name="saber" data-label="JavaScript" value="1" /><label>JavaScript<br></label>
+							<input type="checkbox" name="saber" data-label="CSS3" value="2" /><label>CSS3<br></label>
+						</fieldset>
+						<input type="button" id="clear" value="limpiar textarea">
+						<input type="submit" value="Guardar">
+						<input type="reset" value="limpiar formulario">
+					</form>
+				</div> <!-- col2 -->
+			</div> <!-- cnt_cols -->
 			<script type="text/javascript">
+				/**
+					Validacion del formulario
+					Si retono true se submita
+					Si retono false NO se submita
+				*/
+				function validar(formulario){
+					var resul = true;
+					var no_validar = document.getElementById("no_validar");
+					no_validar.innerHTML = "<span>Se han detectado errores: </span>";
+					
+					//validar text 5-255
+					if(formulario.txt.value.length <= 5 ){
+						no_validar.innerHTML += "<p>- Campo texto incorrecto. Minimo 5 caracteres.</p>";
+						resul = false;
+					}
+					if(formulario.txt.value.length >= 255){
+						no_validar.innerHTML += "<p>- Campo texto incorrecto. Maximo 255 caracteres.</p>";
+						resul = false;
+					}
+					
+					var saber_checked = 0;
+					for(i=0;i<formulario.saber.length;i++){
+						if(formulario.saber[i].checked==true){
+							saber_checked++;
+						}
+					}
+					//validar indeterminado ningun conocimiento
+					if(formulario.sexo.value == "I"){
+						console.debug("sexo i");
+					}
+					//validar hombre min. 1 conocimiento
+					if(formulario.sexo.value == "M"){
+						if(saber_checked < 1){
+							no_validar.innerHTML += "<p>- Siendo Hombre minimo tienes que tener un conocimiento. </p>";
+							resul = false;
+						}
+					}
+					//validar mujer min. 2 conocimiento
+					if(formulario.sexo.value == "F"){
+						if(saber_checked < 2){
+							no_validar.innerHTML += "<p>- Siendo Mujer minimo tienes que tener dos conocimiento. </p>";
+							resul = false;
+						}
+					}				
+					
+					//Si todo corrector submitar formulario
+					if(resul == false){
+						no_validar.style.display = "block";
+					}else{
+						if (window.confirm ("¿Quieres enviar el formulario?") == true){
+							alert("Formulario enviado");
+							formulario.submit();
+						} else {
+							no_validar.innerHTML += "<p>- Formulario o enviado a peticion del usuario</p>"
+							no_validar.style.display = "block";
+							return false;
+						}
+					}
+				}
+			
 				//buscar objetos por su id
 				var txt_area = document.getElementById("txt_area");
 				var boton = document.getElementById("boton");
@@ -117,18 +208,18 @@
 				for (i=0;i<sexo.length;i++){
 					sexo[i].onchange = function(event){
 						console.debug("sexo cambiado");
-						txt_area.value += "Sexo cambiado a " + event.target.dataset.value + " [" + event.target.value + "] \n";
+						txt_area.value += "Sexo cambiado a " + event.target.dataset.label + "[" + event.target.value + "] \n";
 					}
 				}
 				for (i=0;i<saber.length;i++){
 					saber[i].onchange = function(event){
 						console.debug("saber cambiado");
-						if(event.target.checked){
+						if(this.checked){
 							txt_area.value += "Sabes de ";
 						}else{
 							txt_area.value += "Ya no sabes de ";
 						}
-						txt_area.value += event.target.dataset.value + " [" + event.target.value + "] \n";
+						txt_area.value += this.dataset.label + " [" + this.value + "] \n";
 					}
 				}
 				clear.onclick = function(){
