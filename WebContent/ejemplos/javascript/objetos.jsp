@@ -430,10 +430,70 @@
 				}
 				
 			</script>
+			
+			<h3>String</h3>			
+			<p>Capitulo 13; pagina 318</p>	
+			<ul>
+				<h4>esta es una frase para probar los metodos del objeto String estan bien</h4>
+				<li>
+					<strong>indexOf():</strong>
+					<input type="button" id="btn_s_indexof" value="indexOf(cadena_buscada,inicio)">
+					<span id="s_indexof">indexOf('esta') =></span>
+				</li>
+				<li>
+					<strong>lastIndexOf():</strong>
+					<input type="button" id="btn_s_lastindexof" value="lastIndexOf(cadena_buscada,inicio)">
+					<span id="s_lastindexof">lastIndexOf('esta') =></span>
+				</li>
+				<li>
+					<strong>substring():</strong>
+					<input type="button" id="btn_s_substring" value="substring(inicio,fin)">
+					<span id="s_substring">substring(10,30) =></span>
+				</li>
+				<li>
+					<strong>charAt():</strong>
+					<input type="button" id="btn_s_charat" value="charAt(indice)">
+					<span id="s_charat">charAt(50) =></span>
+				</li>
+				<li>
+					<strong>split():</strong>
+					<input type="button" id="btn_s_split" value="split(caracter)">
+					<span id="s_split">split(" ") => Array de la frase <br> </span>
+				</li>
+			</ul>
+			<script>
+				/****************************
+						   STRING
+				****************************/
+				var str = "esta es una frase para probar los metodos del objeto String estan bien"
+				//Metodo indexOf()
+				document.getElementById('btn_s_indexof').onclick = function () {
+					document.getElementById('s_indexof').innerHTML += " La primera coincidencia con la cadena buscada se encuentra en la posicion  " + str.indexOf('esta');
+				}
+				//Metodo lastIndexOf()
+				document.getElementById('btn_s_lastindexof').onclick = function () {
+					document.getElementById('s_lastindexof').innerHTML += " La ultima coincidencia con la cadena buscada se encuentra en la posicion  " + str.lastIndexOf('esta');
+				}
+				//Metodo substring()
+				document.getElementById('btn_s_substring').onclick = function () {
+					document.getElementById('s_substring').innerHTML += " La cadena de texto delimitada entre la posicion 10 y 30 es: " + str.substring(10,30);
+				}				
+				//Metodo charAt()
+				document.getElementById('btn_s_charat').onclick = function () {
+					document.getElementById('s_charat').innerHTML += " El caracter situado en la posicion 50 es: " + str.charAt(50);
+				}				
+				//Metodo split()
+				document.getElementById('btn_s_split').onclick = function () {
+					var str_split = str.split(" ");	
+					for(i=0; i<str_split.length;i++){
+						document.getElementById('s_split').innerHTML += " [" + i + "]" + str_split[i] + "<br>";
+					}
+				}
+			</script>
 						
 		</div> <!-- cnt_article -->
 		<footer>
-			<p>Para visualizar entrar en la console de Chrome 'ctrl+shift+i'</p>
+			<p>Para visualizar la console de Chrome 'ctrl+shift+i'</p>
 		</footer>
 	</article>
 
