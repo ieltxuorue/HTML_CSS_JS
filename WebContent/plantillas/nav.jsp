@@ -13,6 +13,7 @@
 			<ul>
 				<li><a title="Cartelera Cine 2" href="ejemplos/reales/cartelera2.jsp" > Cartelera  </a></li>
 				<li><a title="Detalles de Cartelera Cine" href="ejemplos/reales/cartelera_detalle.jsp" > Cartelera en detalle </a></li>
+				<li><a title="Calcular Entradas Cine" href="ejemplos/reales/calcularentradas.htm" target="_blank"> Calcular entradas </a></li>
 			</ul>
 		</li>	
 		<li><h2>Formularios</h2>
