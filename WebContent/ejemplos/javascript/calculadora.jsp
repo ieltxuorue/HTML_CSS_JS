@@ -105,29 +105,39 @@
 </section>
 	
 <script>
+	
+/****************************************
+ * 				CALCULADORA 
+ ****************************************/	
+	//Declaracion de variables, pntalla y array de botones
 	var pantalla = document.getElementById("pantalla");
-	var boton = document.getElementsByTagName("td");
+	var boton = document.getElementsByTagName("td");	
 	
 	for(i=1; i<boton.length; i++){
-		boton[i].onclick = function (event) {
+		//les asigna un evento onclick a todos los botones (excepto al de la pantalla(i=1))
+		boton[i].onclick = function (event) {			
+			//Al pulsar por primera vez borramos la pantalla
 			if(pantalla.innerHTML=="Pantalla"){
 				pantalla.innerHTML = this.innerHTML;
 			}else{
+				//Cuando lo pulsado es el boton = damos el resultado
 				if(this.innerHTML == "="){
 					pantalla.innerHTML = eval(pantalla.innerHTML);	
+				//Para calcular si un numero es par
 				}else if(this.innerHTML == "PAR"){
-					if(eval(pantalla.innerHTML + "%2") == 0 ){
-						pantalla.innerHTML += " 'true', es PAR";
+					if(eval(eval(pantalla.innerHTML) + "%2") == 0 ){
+						pantalla.innerHTML = eval(pantalla.innerHTML) + " 'true', es PAR";
 					}else{
-						pantalla.innerHTML += " 'false', es IMPAR";
+						pantalla.innerHTML = eval(pantalla.innerHTML) + " 'false', es IMPAR";
 					}
+				//Cuando se pulsa el boton Clear
 				}else if(this.innerHTML == "Clear"){
 					pantalla.innerHTML ="Pantalla";
+				//Añadiendo valores en la pantalla, numeros o operaciones
 				}else{
 					pantalla.innerHTML += this.innerHTML;
 				}
-			}
-			
+			}	
 		}
 	}
 	

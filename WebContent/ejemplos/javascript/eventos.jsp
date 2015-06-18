@@ -109,7 +109,7 @@
 							<legend>Sexo:</legend>
 							<input type="radio" name="sexo" data-label="masculino" value="M" /><label>Masculino</label>
 							<input type="radio" name="sexo" data-label="femenino" value="F" /><label>Femenino</label>
-							<input type="radio" name="sexo" data-label="indefinido" value="I" /><label>Indefinido</label>
+							<input type="radio" name="sexo" data-label="indefinido" value="I" checked/><label>Indefinido</label>
 						</fieldset>
 						<fieldset>
 							<legend>Conocimientos:</legend>
@@ -124,10 +124,11 @@
 				</div> <!-- col2 -->
 			</div> <!-- cnt_cols -->
 			<script type="text/javascript">
+				
 				/**
-					Validacion del formulario
-					Si retono true se submita
-					Si retono false NO se submita
+				*	Validacion del formulario
+				*	Si retono true se submita
+				*	Si retono false NO se submita
 				*/
 				function validar(formulario){
 					var resul = true;
@@ -146,13 +147,9 @@
 					
 					var saber_checked = 0;
 					for(i=0;i<formulario.saber.length;i++){
-						if(formulario.saber[i].checked==true){
+						if(formulario.saber[i].checked){
 							saber_checked++;
 						}
-					}
-					//validar indeterminado ningun conocimiento
-					if(formulario.sexo.value == "I"){
-						console.debug("sexo i");
 					}
 					//validar hombre min. 1 conocimiento
 					if(formulario.sexo.value == "M"){
@@ -182,7 +179,7 @@
 							return false;
 						}
 					}
-				}
+				}//end function validar
 			
 				//buscar objetos por su id
 				var txt_area = document.getElementById("txt_area");
