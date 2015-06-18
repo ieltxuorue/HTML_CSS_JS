@@ -2,6 +2,22 @@
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
 <style>
+	.pantalla {
+		border: 1px solid grey;
+		border-spacing: 5px;
+		background-color: grey; 
+		margin: 0 auto 20px;
+	}
+	.pantalla tr, .pantalla td {
+		width: 500px;
+		height: 100px;
+		border: 1px solid #88ABCB;
+		background-color: #88CDCB;
+		text-align: center;
+		font-size: 40px;
+		font-weight: bold;
+	}
+	
 	.calculadora {
 		border: 1px solid grey;
 		border-spacing: 5px;
@@ -32,48 +48,53 @@
 		<header>
 			<h2>Calculadora</h2>
 		</header>
-		<div class="cnt_article clearfix">					
-			<table class="calculadora">
+		<div class="cnt_article clearfix">	
+			<table class="pantalla">
 				<tr>
-					<td data-key="number" data-value="1" >1</td>
-					<td data-key="number" data-value="2" >2</td>  
-					<td data-key="number" data-value="3" >3</td>
-				</tr>
-				<tr>
-					<td data-key="number" data-value="4" >4</td>
-					<td data-key="number" data-value="5" >5</td> 
-					<td data-key="number" data-value="6" >6</td>		
-				</tr>
-				<tr>
-					<td data-key="number" data-value="7" >7</td>
-					<td data-key="number" data-value="8" >8</td> 
-					<td data-key="number" data-value="9" >9</td>		
-				</tr>
-				<tr>
-					<td data-key="coma" data-value="." >.</td>
-					<td data-key="number" data-value="0" >0</td> 
-					<td data-key="result" data-value="=" >=</td>
+					<td id="pantalla">Pantalla</td>
 				</tr>
 			</table>
-			<table class="calculadora">
-				<tr>
-					<td data-key="operation" data-value="+" >+</td>
-					<td data-key="operation" data-value="-" >-</td>
-				</tr>
-				<tr>
-					<td data-key="operation" data-value="*" >*</td>
-					<td data-key="operation" data-value="/" >/</td>		
-				</tr>
-				<tr>
-					<td data-key="operation" data-value="%" >%</td>
-					<td data-key="operation" data-value="par" >PAR</td>		
-				</tr>
-				<tr>
-					<td data-key="operation" data-value="inc" >INC</td>
-					<td data-key="operation" data-value="dec" >DEC</td>
-				</tr>
-			</table>
-			
+			<div class="clearfix">			
+				<table class="calculadora">
+					<tr>
+						<td data-key="number" data-value="1" >1</td>
+						<td data-key="number" data-value="2" >2</td>  
+						<td data-key="number" data-value="3" >3</td>
+					</tr>
+					<tr>
+						<td data-key="number" data-value="4" >4</td>
+						<td data-key="number" data-value="5" >5</td> 
+						<td data-key="number" data-value="6" >6</td>		
+					</tr>
+					<tr>
+						<td data-key="number" data-value="7" >7</td>
+						<td data-key="number" data-value="8" >8</td> 
+						<td data-key="number" data-value="9" >9</td>		
+					</tr>
+					<tr>
+						<td data-key="coma" data-value="." >.</td>
+						<td data-key="number" data-value="0" >0</td> 
+						<td data-key="result" data-value="=" >=</td>
+					</tr>
+				</table>
+				<table class="calculadora">
+					<tr>
+						<td data-key="operation" data-value="+" >+</td>
+						<td data-key="operation" data-value="-" >-</td>
+					</tr>
+					<tr>
+						<td data-key="operation" data-value="*" >*</td>
+						<td data-key="operation" data-value="/" >/</td>		
+					</tr>
+					<tr>
+						<td data-key="operation" data-value="%" >%</td>
+						<td data-key="operation" data-value="par" >PAR</td>		
+					</tr>
+					<tr>
+						<td colspan="2">Clear</td>
+					</tr>
+				</table>
+			</div>
 			
 		</div> <!-- cnt_article -->
 		<footer>
@@ -82,8 +103,47 @@
 	</article>
 
 </section>
+	
+<script>
+	var pantalla = document.getElementById("pantalla");
+	var boton = document.getElementsByTagName("td");
+	
+	for(i=1; i<boton.length; i++){
+		boton[i].onclick = function (event) {
+			if(pantalla.innerHTML=="Pantalla"){
+				pantalla.innerHTML = this.innerHTML;
+			}else{
+				if(this.innerHTML == "="){
+					pantalla.innerHTML = eval(pantalla.innerHTML);	
+				}else if(this.innerHTML == "PAR"){
+					if(eval(pantalla.innerHTML + "%2") == 0 ){
+						pantalla.innerHTML += " 'true', es PAR";
+					}else{
+						pantalla.innerHTML += " 'false', es IMPAR";
+					}
+				}else if(this.innerHTML == "Clear"){
+					pantalla.innerHTML ="Pantalla";
+				}else{
+					pantalla.innerHTML += this.innerHTML;
+				}
+			}
+			
+		}
+	}
+	
 
-<script>		
+
+
+
+
+
+
+
+
+/****************************************
+ * 		CALCULADORA CONSOLA VIEJA
+ ****************************************/
+
 	//definir operaciones para la calculadora
 	const SUMAR 		= 0;
 	const RESTAR 		= 1;
