@@ -80,6 +80,7 @@ function justNumbers(event) {
     	return true;
     }    
     return /\d/.test(String.fromCharCode(keynum));
-} //end:function jusNumbres
+} //end:function justNumbers
+
 
 	

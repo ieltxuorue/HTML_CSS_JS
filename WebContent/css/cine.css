@@ -5,69 +5,23 @@
 		
 */
 
-/*****************************  
+/******************************  
    RESET    
 *******************************/
 @import url("reset.css");
 
-/***************************** 
-      		ETIQUETAS 
+/****************************** 
+			ETIQUETAS
 *******************************/ 
-h1 {
-	font-family: arial;
-	font-size: 25px;
-	text-align: center;
-	color: #6DBAD2;
-	margin-top: 10px;
-	margin-bottom: 25px;
-}	
-
-label {
-	font-weight: bold;
+body {
+	font-size: 16px;
 }
 
-footer {
-	position: absolute;
-	left: 35px;
-	bottom: 25px;
-	color: #FFF;
-	font-size: 20px;
-}
-
-footer span {
-	font: arial;	
-}
-
-footer span#precio {
-	font-family: arial;
-  	font-size: 80px;
-  	position: absolute;
-  	bottom: -10px;
-  	right: -150px; 	
-}
-
-/***************************** 
-      ESTILOS REUTILIZABLES 
+/****************************** 
+		calcular_entradas
 *******************************/ 
-.cnt {
-	padding: 0 40px;
-	font: arial;
-}
-.cnt select {
-	margin-right: 10px;
-}
-
-	
-/***************************** 
-			PAGINAS
-*******************************/ 
-
-/*
-*	calcularentradas
-*/
-
-#container {
-	margin: 20px auto;
+#calcular_entrada {
+	margin: 50px auto;
 	width: 300px;
 	height: 400px;
 	background-image: url('../img/entrada_cine.jpg');
@@ -75,5 +29,41 @@ footer span#precio {
 	position: relative;
 }
 
+#calcular_entrada header {
+	height: 50px;
+	width: 100%;
+	margin-top: 10px;
+}
+	#calcular_entrada header h1 {
+		font-family: arial;
+		font-size: 1.5em;
+		text-align: center;
+		color: #6DBAD2;
+	}	
 
+#calcular_entrada div#selectores {
+	padding: 0 40px;
+	font: arial;
+}
+	#calcular_entrada div#selectores label {
+		font-weight: bold;
+	}
+	#calcular_entrada div#selectores select {
+		margin-right: 10px;
+	}
 
+#calcular_entrada footer {
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	padding: 5%;
+	color: #FFF;
+	font-size: 1.2em;
+	font-family: arial;	
+}
+	#calcular_entrada footer output#precio {
+		position: absolute;
+		bottom: 5px;
+		right: 40px;
+		font-size: 5em;
+	}
