@@ -135,5 +135,13 @@ function convertirFecha ( date, formato ){
 }
 
 
+/**
+ * Funcion que solo deja introducir numeros
+ *  
+ * @returns
+ */
+function justNumbers(event) {
+    return event.charCode >= 48 && event.charCode <= 57;
+} //end:function justNumbers
 
 
