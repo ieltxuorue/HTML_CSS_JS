@@ -54,7 +54,7 @@
 				<a href=""><img src="img/dado.png" alt="Dado de seis caras"/></a>
 			</div>
 		
-			<h1>Ejemplos HTML5, CSS3 y JavaScript</h1>
+			<h1 id="titulo">Ejemplos HTML5, CSS3 y JavaScript</h1>
 		</div>	<!-- Navegacion menu principal -->
 
 	
