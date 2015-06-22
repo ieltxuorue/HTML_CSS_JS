@@ -18,7 +18,10 @@
 	.clearfix:after { clear: both; }
 	.clearfix { *zoom: 1; }
 
-
+/************************
+		FONT-FACE
+		http://es.fontriver.com/
+************************/
 @font-face {
     font-family: miFuente1;
     src: url("../fonts/BubblegumSans-Regular.otf");
@@ -26,9 +29,26 @@
 @font-face {
     font-family: miFuente2;
     src: url("../fonts/Alef-Regular.ttf");
-}@font-face {
+}
+@font-face {
     font-family: miFuente3;
     src: url("../fonts/Just Gotta Smile.ttf");
+}
+@font-face {
+    font-family: miFuente4;
+    src: url("../fonts/Drifttype.ttf");
+}
+@font-face {
+    font-family: miFuente5;
+    src: url("../fonts/HARD_ROCK.ttf");
+}
+@font-face {
+    font-family: miFuente6;
+    src: url("../fonts/TENGWAR.TTF");
+}
+@font-face {
+    font-family: miFuente7;
+    src: url("../fonts/code128.ttf");
 }
 
 /*	
@@ -43,7 +63,7 @@ h1 {
 	text-align: center;
 }
 h1#titulo {
-	font-family: miFuente3;
+	font-family: miFuente1;
 }
 h2{
 	margin-top: 30px;
