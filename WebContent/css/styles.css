@@ -5,50 +5,36 @@
 	
 */
 
-/*********************** 
+/******************************** 
 		RESET
 	Resetear todos los estilos para cualquier navegador.
-***********************/
+********************************/ 
 /*@import url("reset.css");
 
-/************************
+/********************************  
+		MEDIA-QUERY
+********************************/ 
+/* @import url("media.css"); */
+
+/******************************** 
 		CLEARFIX
-************************/
+********************************/ 
 	.clearfix:before, .clearfix:after { content: ""; display: table; }
 	.clearfix:after { clear: both; }
 	.clearfix { *zoom: 1; }
 
-/************************
+/******************************** 
 		FONT-FACE
-		http://es.fontriver.com/
-************************/
+	http://es.fontriver.com/
+********************************/ 
 @font-face {
-    font-family: miFuente1;
+    font-family: BubblegumSans;
     src: url("../fonts/BubblegumSans-Regular.otf");
 }
 @font-face {
-    font-family: miFuente2;
-    src: url("../fonts/Alef-Regular.ttf");
-}
-@font-face {
-    font-family: miFuente3;
-    src: url("../fonts/Just Gotta Smile.ttf");
-}
-@font-face {
-    font-family: miFuente4;
-    src: url("../fonts/Drifttype.ttf");
-}
-@font-face {
-    font-family: miFuente5;
-    src: url("../fonts/HARD_ROCK.ttf");
-}
-@font-face {
-    font-family: miFuente6;
-    src: url("../fonts/TENGWAR.TTF");
-}
-@font-face {
-    font-family: miFuente7;
-    src: url("../fonts/code128.ttf");
+    font-family: Calligraffitti;
+    src: url("../fonts/Calligraffitti.woff2") format('woff2'),
+    	 url("../fonts/Calligraffitti.ttf") format('truetype');
 }
 
 /*	
@@ -59,11 +45,11 @@ h1 {
 	color: green;
 	margin-bottom: 30px;
 	font-family: arial;
-	font-size: 50px;
+	font-size: 3em;
 	text-align: center;
 }
 h1#titulo {
-	font-family: miFuente1;
+	font-family: Calligraffitti;
 }
 h2{
 	margin-top: 30px;
@@ -251,6 +237,38 @@ article h2{
 	width: 39%;
 }
 
+/*******************************
+			LAYOUT
+*******************************/
+#container{
+	max-width: 960px; /* recomendable 960px */
+	min-width: 460px;
+	margin: 0 auto;
+	padding: 0 20px;
+	border-right: 1px solid grey;
+	border-left: 1px solid grey;
+	font-family: arial;
+	background-color: white;
+}
+#head{
+	max-width: 960px;
+}
+
+#content{
+	width: 100%;
+}
+	#home #leer {
+		width: 70%;
+		margin-right: 5%;
+	}
+	#home #barra_lateral {
+		width: 20%;
+		padding: 2%
+	}
+#foot{
+	max-width: 960px;
+	margin: 0 auto;
+}
 
 /*
 	PAGINAS
@@ -268,16 +286,16 @@ article h2{
 	z-index: 100;
 }
 #head{
-	width: 920px;
 	top: 0px;
 }
 nav{
-	top: 180px;
+	top: 120px;
 }
 #content {
-	padding-top: 215px;
+	padding-top: 150px;
 	padding-bottom: 1px;
 }
+
 
 
 /*********************
@@ -288,7 +306,6 @@ nav * {
 	margin: 0px;
 }
 nav {
-	width: 920px;
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -357,8 +374,6 @@ nav h2, nav h3 {
 
 #foot{
 	display: block;
-	margin: 0 auto;
-	width: 620px;
 	font-size: 15px;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: white;
@@ -424,6 +439,10 @@ nav h2, nav h3 {
 	background-position: -145px 0;
 }
 
+div#top {
+	display: none;
+}
+
 
 /*********************
 		HOME
@@ -433,14 +452,7 @@ nav h2, nav h3 {
 #leer, #barra_lateral {
 	float: left;
 }
-#leer {
-	width: 70%;
-	margin-right: 5%;
-}
-#barra_lateral {
-	width: 20%;
-	padding: 2%
-}
+
 
 /*	Estilo aside	*/
 #barra_lateral h3 {
@@ -631,9 +643,6 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 
 
-
-
-
 /* Reglas con selectores por ID */
 
 #dado{
@@ -641,12 +650,24 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	height: 100px;
 }
 
-#container{
-	width: 900px;
-	margin: 0 auto;
-	padding: 0 20px;
-	border-right: 1px solid grey;
-	border-left: 1px solid grey;
-	font-family: arial;
-	background-color: white;
+
+
+
+/****************************************************************************************************/
+/* Se aplican estas reglas si el ancho es menor de 460px (BREAKPOINTS)*/
+@media screen and (max-width:460px) {
+	#head h1 {
+		color: red;
+		font-size: 1.2em;
+		text-align: left;
+	}
+	
+	div#top {
+		display: inline;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 35px;
+		height: 35px;
+	}	
 }

@@ -1,0 +1,17 @@
+/* Se aplican estas reglas si el ancho es menor de 460px (BREAKPOINTS)*/
+@media screen and (max-width:460px) {
+	#head h1 {
+		color: red;
+		font-size: 1.2em;
+		text-align: left;
+	}
+	
+	div#top {
+		display: inline;
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+		width: 45px;
+		height: 45px;
+	}	
+}

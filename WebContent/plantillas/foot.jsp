@@ -28,6 +28,13 @@
 			</ul> 
 		</div>
 	</footer>
+	
+	<!-- Boton para ir hasta arriba de la pagina -->
+	<div id="top">
+		<a href="<%=request.getRequestURL()%>#container" title="Ir inicio pagina">
+			<i class="fa fa-arrow-circle-up fa-2x"></i>
+		</a>
+	</div>
 
 </div> <!-- container -->
 
@@ -42,6 +49,9 @@
 	
 	<!-- Custom JavaScript filtro filtrar texto en select-option -->
 	<script src="js/filter_by_text.js" ></script>
+	
+	<!-- http://responsive-nav.com/ -->
+	<script src="js/responsive-nav/responsive-nav.min.js"></script>
 	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->
 	<script src="js/main.js" ></script>

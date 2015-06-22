@@ -37,12 +37,8 @@
 		</table>
 		
 		<p class="numero" id="num_afortunado" >???</p>
-		<input type="button" value="Obtener nuevo afortunad@" class="btn" name="btn_ganador" onclick="obtener_ganador();" />
-		
-				
+		<input type="button" value="Obtener nuevo afortunad@" class="btn" name="btn_ganador" onclick="obtener_ganador();" />			
 	</section> 	
-	
-
 	
 	<!-- Sidebar con contenido NO principal de la pagina -->
 	<aside id="barra_lateral">
