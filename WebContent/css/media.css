@@ -6,6 +6,7 @@
 	}
 	#head {
 		width: 100%;
+		padding-top: 1%;
 	}
 	#head h1 {
 		color: red;
@@ -27,11 +28,12 @@
 		margin: 0;
 	}
 	#leer h2 {
-		margin: 0 0 2% 0;		
+		margin: 0 0 2% 2%;		
 	}
 	
 	table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 		font-size: 1em;
+		margin-left: 10%;
 	}
 	.tabla_azul th, .tabla_azul td {
     	padding: 5px;
@@ -41,11 +43,35 @@
 		line-height: 2em;
 	}
 	
+	#home #barra_lateral{
+		margin-top: 3%;
+		padding-top: 0;
+		background-color: #c0c0c0;
+		margin-bottom: 3%;
+	}
+	#home #barra_lateral li{
+  		margin-bottom: 15px;
+    	border-bottom: 1px solid #000; 	
+	}
+	
+	#foot {
+		padding: 2%;
+		color: white;
+		background-color: #3e3e3e;
+	}
 	.copy, #list_paginas {
 		margin: 0;
 		float: none;
+		padding: 0;	
+	}
+	.copy, #list_paginas li a {
+		color: white;
+		background-color: #3e3e3e;	
 	}
 	
+	#list_rrss ul {	padding-left: 10%;	}
+		#list_rrss li {	width: 23%;	}	
+			#list_rrss li {	margin-left: 1%;	}	
 	
 	div#top {
 		display: inline;

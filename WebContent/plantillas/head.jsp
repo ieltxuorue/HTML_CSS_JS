@@ -16,6 +16,7 @@
 	
 	<!-- ?v=  Para pasar un parametro. FUNCION => Para obligar al navegador a descargar el ultimo estilo. -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css?v=20150518_1.0">
+	<link rel="stylesheet" type="text/css" href="css/media.css?v=20150623_1.0">
 	
 	<!-- jQuery UI CSS -->
 	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
@@ -25,7 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="fonts/fontmeteo/css/font-meteo.css">
 	
 	<!-- http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/ -->
-  	<link rel="stylesheet" href="js/ResponsiveMultiLevelMenu/css/default.css">
+  	
   	<link rel="stylesheet" href="js/ResponsiveMultiLevelMenu/css/component.css">
   	<script src="js/ResponsiveMultiLevelMenu/js/modernizr.custom.js" ></script>
 
@@ -61,7 +62,7 @@
 	
 		<!-- Menu movil -->
 	<div id="dl-menu" class="dl-menuwrapper"> 
-	  <button class="dl-trigger">Open Menu</button>	
+	  <button class="dl-trigger">Hola</button>	
 	 	
 	  <ul class="dl-menu">	
 		<li>
