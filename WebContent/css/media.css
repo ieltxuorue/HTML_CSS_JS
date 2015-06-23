@@ -1,17 +1,59 @@
+/****************************************************************************************************/
 /* Se aplican estas reglas si el ancho es menor de 460px (BREAKPOINTS)*/
 @media screen and (max-width:460px) {
+	body {
+		margin: 0;
+	}
+	#head {
+		width: 100%;
+	}
 	#head h1 {
 		color: red;
-		font-size: 1.2em;
-		text-align: left;
+		font-size: 1.5em;
+		text-align: center;
+		float: left;
+  		margin-top: -10%;
+  		margin-left: 15%;	
 	}
+	#head #logo {
+		display: none;
+	}
+	#dl-menu { display: inline; }
+	#dsk-menu { display: none; }
+	
+	#home #leer, #home #barra_lateral {
+		width: 70%; 
+		float: none;
+		margin: 0;
+	}
+	#leer h2 {
+		margin: 0 0 2% 0;		
+	}
+	
+	table.tabla_azul, .tabla_azul tr, .tabla_azul td {
+		font-size: 1em;
+	}
+	.tabla_azul th, .tabla_azul td {
+    	padding: 5px;
+	}
+	.numero{
+		font-size: 2em;
+		line-height: 2em;
+	}
+	
+	.copy, #list_paginas {
+		margin: 0;
+		float: none;
+	}
+	
 	
 	div#top {
 		display: inline;
 		position: fixed;
-		bottom: 5px;
-		right: 5px;
-		width: 45px;
-		height: 45px;
+		bottom: 0;
+		right: 0;
+		width: 35px;
+		height: 35px;
 	}	
+		
 }

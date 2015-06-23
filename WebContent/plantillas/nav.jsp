@@ -1,5 +1,7 @@
-<nav class="clearfix">	
-	<ul class="menu">
+<!-- menu desktop --> 
+<nav id="dsk-menu" class="clearfix"> 
+ 	
+  <ul id="" class="menu">	
 		<li><h2>B&aacute;sicos</h2>
 			<ul>
 				<li><a title="Ir a ejemplos de parrafos y enlaces internos" href="ejemplos/basicos/parrafos_anclas.jsp" >Parrafos y Anclas internos</a></li>

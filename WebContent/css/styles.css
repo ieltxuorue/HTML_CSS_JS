@@ -43,13 +43,14 @@
 */
 h1 {
 	color: green;
-	margin-bottom: 30px;
+	margin-bottom: 2%;
 	font-family: arial;
 	font-size: 3em;
 	text-align: center;
 }
 h1#titulo {
 	font-family: Calligraffitti;
+	max-width: 100%;
 }
 h2{
 	margin-top: 30px;
@@ -94,8 +95,6 @@ body {
 header, nav, section, aside, footer{
 	background-color: white;
 }
-
-
 
 a{
 	text-decoration: none;  
@@ -242,9 +241,9 @@ article h2{
 *******************************/
 #container{
 	max-width: 960px; /* recomendable 960px */
-	min-width: 460px;
+	min-width: 320px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 2%;
 	border-right: 1px solid grey;
 	border-left: 1px solid grey;
 	font-family: arial;
@@ -252,6 +251,7 @@ article h2{
 }
 #head{
 	max-width: 960px;
+	width: 900px;
 }
 
 #content{
@@ -289,14 +289,12 @@ article h2{
 	top: 0px;
 }
 nav{
-	top: 120px;
+	top: ;
 }
 #content {
-	padding-top: 150px;
+	padding-top: 19%;
 	padding-bottom: 1px;
 }
-
-
 
 /*********************
 	MENU PRINCIPAL
@@ -318,6 +316,9 @@ nav ul ul {
 nav h2, nav h3 {
 	margin: 0px;
 }
+
+#dl-menu { display:none; }
+
 .menu li a, .menu li h2, .menu li h3 {
 	background-color: black;
 	color: white;
@@ -374,7 +375,7 @@ nav h2, nav h3 {
 
 #foot{
 	display: block;
-	font-size: 15px;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: white;
 }
@@ -453,7 +454,6 @@ div#top {
 	float: left;
 }
 
-
 /*	Estilo aside	*/
 #barra_lateral h3 {
 	color: #228fb8;
@@ -468,7 +468,7 @@ div#top {
 /*	Estilo section	*/
 #leer h2 {
 	color: #228fb8;
-	font-size: 30px;
+	font-size: 1.2em;
 }
 table.tabla_azul, .tabla_azul tr, .tabla_azul td {
     margin: 0 auto;
@@ -646,8 +646,8 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 /* Reglas con selectores por ID */
 
 #dado{
-	width: 100px;
-	height: 100px;
+	width: 20%;
+	height: 20%;
 }
 
 
@@ -656,11 +656,51 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 /****************************************************************************************************/
 /* Se aplican estas reglas si el ancho es menor de 460px (BREAKPOINTS)*/
 @media screen and (max-width:460px) {
+	body {
+		margin: 0;
+	}
+	#head {
+		width: 100%;
+	}
 	#head h1 {
 		color: red;
-		font-size: 1.2em;
-		text-align: left;
+		font-size: 1.5em;
+		text-align: center;
+		float: left;
+  		margin-top: -10%;
+  		margin-left: 15%;	
 	}
+	#head #logo {
+		display: none;
+	}
+	#dl-menu { display: inline; }
+	#dsk-menu { display: none; }
+	
+	#home #leer, #home #barra_lateral {
+		width: 70%; 
+		float: none;
+		margin: 0;
+	}
+	#leer h2 {
+		margin: 0 0 2% 2%;		
+	}
+	
+	table.tabla_azul, .tabla_azul tr, .tabla_azul td {
+		font-size: 1em;
+		margin-left: 10%;
+	}
+	.tabla_azul th, .tabla_azul td {
+    	padding: 5px;
+	}
+	.numero{
+		font-size: 2em;
+		line-height: 2em;
+	}
+	
+	.copy, #list_paginas {
+		margin: 0;
+		float: none;
+	}	
 	
 	div#top {
 		display: inline;
@@ -670,4 +710,5 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 		width: 35px;
 		height: 35px;
 	}	
+		
 }
