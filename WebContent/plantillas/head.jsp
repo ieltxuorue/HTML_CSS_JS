@@ -24,6 +24,9 @@
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.css">
 	<!-- FontMeteoIcon -->
 	<link rel="stylesheet" type="text/css" href="fonts/fontmeteo/css/font-meteo.css">
+	<!-- FontCartelera -->
+	<link rel="stylesheet" type="text/css" href="fonts/fontcartelera/style.css">
+	
 	
 	<!-- http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/ -->
   	
