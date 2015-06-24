@@ -58,6 +58,7 @@
 		padding: 2%;
 		color: white;
 		background-color: #3e3e3e;
+		margin-bottom: 2%;
 	}
 	.copy, #list_paginas {
 		margin: 0;
@@ -81,5 +82,49 @@
 		width: 35px;
 		height: 35px;
 	}	
+	
+	/* Cartelera */
+	div#ficha .no_movil{
+		display: none;
+	}
+	div#ficha h2{
+		font-size: 1.4em;
+	}
+	
+	.imagen {
+	  width: 100%;
+	  height: 182px;
+	}
+	
+	#cartelera li {
+	  float: left;
+	  margin-right: 5%;
+	  margin-bottom: 5%;
+	  width: 40%;
+	}
+	#cartelera .pelicula:hover .titulo {
+		display: none;
+	}
+	#cartelera li:nth-child(3n){
+		margin-right: 5%;
+	}#cartelera li:nth-child(2n){
+		margin-right: 0;
+	}
+	
+	div#ficha {
+		position: relative;
+	}
+	.poster {
+		float: none; 
+		width: 40%;
+		height: auto;
+		position: absolute;
+		bottom: 2%;
+		left: 30%;
+	}
+	div#ficha p.valoracion {
+		margin-bottom: 200px;
+	}
+
 		
 }

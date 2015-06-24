@@ -144,9 +144,9 @@ article h2{
 }
 
 .encabezado{
-	margin-left: 120px;
-    margin-right: 120px;
-	margin-bottom: 50px;
+	margin-left: 5%;
+    margin-right: 5%;
+	margin-bottom: 2%;
 	text-align: center;
 	border: 1px dotted green;
 }
@@ -213,6 +213,7 @@ article h2{
 	text-decoration: underline;
 }
 
+
 /* contenedor para columnas */
 .cnt_cols{
 	width: 100%;
@@ -230,6 +231,58 @@ article h2{
 	padding: 5%;
 	width: 39%;
 }
+
+
+/* Ventana modal */
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 79%;
+	position: relative;
+	margin: 5% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
 
 /*******************************
 			LAYOUT
@@ -524,11 +577,11 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 }
 #cartelera li {
 	float: left;
-	margin-right: 30px;
-	margin-bottom: 30px;  
+	margin-right: 5%;
+	margin-bottom: 5%;  
 }
 #cartelera li:nth-child(3n){
-	margin-right: 0px;
+	margin-right: 0;
 }
 
 .pelicula{
@@ -549,14 +602,14 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	display: none;
 }
 .titulo h3 {
-	font-size: 20px;
+	font-size: 1.2em;
 	text-transform: uppercase;
 	text-align: center;
 	color: green;
 	font-weight: bolder;
 }
 .titulo p {
-	font-size: 12px;
+	font-size: 0.8em;
 	text-transform: capitalize;
 	text-align: left;
 	color: green;
@@ -568,6 +621,31 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	text-transform: lowercase;
 }
 
+.poster {
+	float: left;
+	margin-right: 5%;
+	width: 450px;
+	height: auto;
+}
+
+div#ficha h2{
+	text-align: center;
+	font-size: 2em;
+	color: blue;
+	font-weight: bold;
+}
+div#ficha p span {
+	font-weight: bold;
+}
+
+div#ficha p.valoracion {
+	text-align: right;
+	font-size: 1.5em;
+	color: #eec00b;
+}
+div#ficha p.valoracion span{
+	color: black;
+}
 
 
 /* CARTELERA DETALLE */
