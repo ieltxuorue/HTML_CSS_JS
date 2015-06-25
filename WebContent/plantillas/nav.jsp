@@ -16,6 +16,7 @@
 				<li><a title="Cartelera Cine 2" href="ejemplos/reales/cartelera2.jsp" > Cartelera  </a></li>
 				<li><a title="Detalles de Cartelera Cine" href="ejemplos/reales/cartelera_detalle.jsp" > Cartelera en detalle </a></li>
 				<li><a title="Calcular Entradas Cine" href="ejemplos/reales/calcularentradas.htm" target="_blank"> Calcular entradas </a></li>
+				<li><a title="Surf Search Spor" href="ejemplos/reales/surfsearchspot.jsp" target="_blank"> Maquetacion Surf </a></li>
 			</ul>
 		</li>	
 		<li><h2>Formularios</h2>
@@ -94,6 +95,9 @@
 					</ul>
 				</li>
 			</ul>
+		</li>
+		<li>
+			<a title="Pruebas" href="pruebas.jsp" >PRUEBAS</a>
 		</li>
 	</ul>	
 </nav>
