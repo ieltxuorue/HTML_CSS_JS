@@ -26,14 +26,12 @@
 	<link rel="stylesheet" type="text/css" href="fonts/fontmeteo/css/font-meteo.css">
 	<!-- FontCartelera -->
 	<link rel="stylesheet" type="text/css" href="fonts/fontcartelera/style.css">
+	<!-- Highlight.js" -->
+	<link rel="stylesheet" href="js/highlightjs-8.6/styles/github.css">
 	
-	
-	<!-- http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/ -->
-  	
+	<!-- http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/ -->  	
   	<link rel="stylesheet" href="js/ResponsiveMultiLevelMenu/css/component.css">
   	<script src="js/ResponsiveMultiLevelMenu/js/modernizr.custom.js" ></script>
-
-	
   
 	<!-- icono pestaña -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">

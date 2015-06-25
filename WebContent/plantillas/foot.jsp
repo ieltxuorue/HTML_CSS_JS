@@ -51,19 +51,14 @@
 	<script src="js/filter_by_text.js" ></script>
 	
 	<!-- http://responsive-nav.com/ -->
- 
  	<script src="js/ResponsiveMultiLevelMenu/js/jquery.dlmenu.js" ></script>  
- 	<script>
-			$(function() {
-				$( '#dl-menu' ).dlmenu({
-					animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
-				});
-			});
-	</script>
+	
+	<!-- https://highlightjs.org/ -->
+	<script src="js/highlightjs-8.6/highlight.pack.js"></script>
 	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->
 	<script src="js/main.js" ></script>
-	<script src="js/utilidades.js"></script>	
+	<script src="js/utilidades.js?v=20150624_v1"></script>	
 
 </body>
 </html>
