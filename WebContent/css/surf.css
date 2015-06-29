@@ -62,7 +62,10 @@ i.fa {
 	margin-bottom: 2%;
 }
 
-/* colores y tamaños */
+/************************** 
+		  CAJAS
+	colores y tamaños 
+**************************/
 #head {
 	background-color: #E6F1F6;
 	padding: 2% 0;
@@ -109,7 +112,7 @@ i.fa {
 	}
 	#content .caja1x2 {
 		width: 24.25%;
-		height: 489.594px;
+		height: 489.5px;
 		float: left;
 		margin-right: 1%;
 		background-color: green;
@@ -121,16 +124,22 @@ i.fa {
 	#content #fila1 div:last-child, #fila2 > div:last-child, #fila3 div:last-child {
 		margin-right: 0;
 	}
-
-		#box div:first-child, #box div:nth-child(2) {
-			margin-bottom: 1%;
+		#fila2 #box div:first-child, #fila2 #box div:nth-child(2) {
+			margin-bottom: 2%;
 		}
-		
-		#fila2 > div:last-child{
-			float: none;
-  			margin-left: 75.75%;
+#content #box {
+	float: left;
+	width: 49.50%;
+	margin-right: 1%;
+}
+	#content #box .caja1x1 {
+		width: 49%;
+		margin-right: 2%;
+	}
+		#content #box .caja1x1:nth-child(2n){
+			margin-right: 0%;
 		}
-		
+				
 #foot p {
 	font-size: 1.2em;
 	background-color: #CCCCCC;

@@ -1,0 +1,142 @@
+/*   
+	version:  1.0
+	author:   Ieltxu Orue Ibañez
+	date: 	  20150625
+		
+*/
+
+/******************************  
+   RESET    
+*******************************/
+@import url("reset.css");
+
+/******************************** 
+		CLEARFIX
+********************************/ 
+.clearfix:before, .clearfix:after {
+	content: ""; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.clearfix { 
+	*zoom: 1; 
+}
+	
+/****************************** 
+			ETIQUETAS
+*******************************/ 
+body {
+	font-size: 16px;
+}
+
+/****************************** 
+		MAQUETACION
+	   -- Ipartek --
+*******************************/ 
+/* 		Layauts 	*/
+/********************
+#container	
+	#head
+		#titulo
+		#menu
+	#content
+		#asideleft
+		#cnt
+		#asideright
+#wraper-foot
+	#foot
+*********************/
+#container, #wraper-foot {
+	width: 100%;
+}
+#head, #content, #foot {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/************************** 
+		  CAJAS
+	colores y tamaños 
+**************************/
+#head { margin: 15px auto; background-color: #BBB;}
+	#head #logo, #head #menu { float: left; }
+	#head #logo { width: 175px;  margin-right: 12px;}
+		#head #logo h1 {
+			text-align: center;
+			font-size: 3em;
+			font-family: fantasy;
+			color: #0099CC;
+		}
+	#head #menu { width: 720px; background: #0099CC; border-radius: 12px;}
+		#menu ul { list-style: none; width: 100%; }
+			#menu li{
+				float: left;
+				text-align: center;		
+				color: #FFF;
+				padding: 1em 0.7em;
+				font-size: 1em;
+				font-weight: bold;
+			}
+				#menu li a { text-decoration: none; color: #FFF; }
+					#menu li:hover{ background-color: #CCCCCC; }
+
+#content { margin-bottom: 15px; }
+	#content #asideleft, #content #cnt { float: left; margin-right: 15px;}
+	#content #asideright { float: right; }
+		#content #asideleft, #content #asideright { width: 175px; }
+			#content .cajita {
+				width: 100%;
+				line-height: 40px;
+				background-color: #BBBBBB;
+				padding-right: 5px;
+				color: #0099CC;
+				margin-bottom: 10px;
+				border-radius: 12px;
+			}
+		#content #cnt { width: 575px; min-height: 500px;}
+			#content #cnt .izq { float: left; }
+			#content #cnt .der { float: right; }
+			#content #cnt .caja {
+				width: 280px;
+				min-height: 130px;
+				background-color: #BBBBBB;
+				margin-right: 14px;
+				margin-bottom: 10px;
+				border-radius: 12px;
+			}
+			#content #cnt .caja2 {
+				width: 280px;
+				min-height: 270px;
+				background-color: #BBBBBB;
+				margin-right: 14px;
+				margin-bottom: 10px;
+				border-radius: 12px;
+			}
+			
+			#content #cnt .caja:nth-child(1) {
+				background-color: #983130;
+			}
+			#content #cnt .caja:nth-child(2) {
+				background-color: #80ff00;
+				margin-right: 0;
+			}
+			#content #cnt .caja2 {
+				background-color: #BBBBBB;
+				margin-right: 0;
+			}
+			#content #cnt .caja:nth-child(4) {
+				background-color: #00ffff;
+			}
+			#content #cnt .caja:nth-child(5) {
+				background-color: #ff8000;
+			}
+			
+#wraper-foot, #foot {	
+	background-color: #CCC;
+	font-size: 2em;
+	text-align: center;
+}			
+
+

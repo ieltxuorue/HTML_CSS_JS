@@ -46,7 +46,7 @@
 			</div>
 			<div id="fila2" class="clearfix">
 				<div class="caja1x2"></div>
-				<div id="box">
+				<div id="box" class="clearfix">
 					<div class="caja1x1"></div>
 					<div class="caja1x1"></div>
 					<div class="caja1x1"></div>
