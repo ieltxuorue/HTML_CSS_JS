@@ -54,6 +54,7 @@
 			<li><a href="https://librosweb.es/libro/css_avanzado" target="_blank">CSS Avanzado</a></li>
 			<li><a href="http://apps.pixlr.com/editor/" target="_blank">Photoshop Online</a></li>
 			<li><a href="http://es.lipsum.com" target="_blank">lorem ipsum</a></li>
+			<li><a href="http://json.parser.online.fr/" target="_blank">JSON Parser Online</a></li>
 		</ul>
 	</aside>
 
