@@ -284,6 +284,15 @@ article h2{
 }
 .close:hover { background: #00d9ff; }
 
+
+/* mensajes usuario formulario */
+.fa-check {
+	color: green !important;
+}
+.fa-times {
+	color: red !important;
+}
+
 /*******************************
 			LAYOUT
 *******************************/

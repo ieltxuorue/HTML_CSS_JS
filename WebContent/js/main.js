@@ -48,22 +48,111 @@ $(function() {
 		$.datepicker.setDefaults($.datepicker.regional['es']);
 	});    
 	
-	// http://responsive-nav.com
-//	var navigation = responsiveNav(".nav-collapse", {
-//        animate: true,                    // Boolean: Use CSS3 transitions, true or false
-//        transition: 284,                  // Integer: Speed of the transition, in milliseconds
-//        label: "Menu",                    // String: Label for the navigation toggle
-//        insert: "after",                  // String: Insert the toggle before or after the navigation
-//        customToggle: "",                 // Selector: Specify the ID of a custom toggle
-//        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
-//        openPos: "relative",              // String: Position of the opened nav, relative or static
-//        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
-//        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
-//        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
-//        init: function(){},               // Function: Init callback
-//        open: function(){},               // Function: Open callback
-//        close: function(){}               // Function: Close callback
-//      });
+
 });
+
+function validarEmail( email ) {
+    expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if ( !expr.test(email) )
+        alert("Error: La dirección de correo " + email + " es incorrecta.");
+}
+
+
+
+	/* REGISTRO USUARIOS control de usuarios existentes */
+
+function llamadaAjax(code){
+	
+	var usuario = $("#usuario");
+	
+	//Url donde se encuentra el servicio Ajax
+	var url = "NuevoUsuario";
+	
+	$.ajax(url, {
+		"type": "get", // usualmente post o get
+		"success": function(result) {
+			console.log(result);				
+			switch (code) {
+				case "user":
+					$(".msg_user_delete").remove();
+					var user_mensaje =  "<span class='msg_user_delete'>";
+					if(result.valid_user){
+						user_mensaje += "<i class='fa fa-check'></i>";
+					}else{
+						user_mensaje += "<i class='fa fa-times'></i>";
+					}
+					user_mensaje += "</span>"; 
+					$("#usuario").after(user_mensaje);
+					break;
+					
+				case "mail":
+					$(".msg_mail_delete").remove();
+					var mail_mensaje =  "<span class='msg_mail_delete'>";
+					if(result.valid_mail){
+						mail_mensaje += "<i class='fa fa-check'></i>";
+					}else{
+						mail_mensaje += "<i class='fa fa-times'></i>";
+					}
+					mail_mensaje += "</span>"; 
+					$("#mail").after(mail_mensaje);
+					
+					break;
+			}			
+		},
+		"error": function(result) {
+			console.error("Este callback maneja los errores", result);
+		},
+		"data": {usuario: $("#usuario").val(), mail: $("#mail").val() },
+					
+		"async": true,
+		});
+};
+
+//Seleccionar usuario del formulario
+$("#form_new_user #usuario").blur(function(){
+	var code = "user";
+	llamadaAjax(code);	
+}); 
+//Seleccionar email del formulario
+$("#form_new_user #mail").blur(function(){
+	var code = "mail";
+	var correo = $("#form_new_user #mail")
+	expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if ( expr.test(correo.val()) ){
+    	llamadaAjax(code);
+    }else{
+    	$(".msg_mail_delete").remove();
+    	$("#mail").after("<span class='msg_mail_delete'><i class='fa fa-times'></i></span>");
+    }
+}); 
+//Seleccionar pass/repass del formulario
+$("#form_new_user #repass").blur(function(){
+	var pass = document.getElementById("pass");
+	var repass = document.getElementById("repass");
+
+	$(".msg_pass_delete").remove();
+	var pass_mensaje = "<span class='msg_pass_delete'>";
+	if (pass.value == repass.value && pass.value != "") {
+		pass_mensaje += "<i class='fa fa-check'></i>";
+	}else{
+		pass_mensaje += "<i class='fa fa-times'></i>";
+	}
+	pass_mensaje += "</span>"; 
+	
+	$("#repass").after(pass_mensaje);
+	
+});
+
+function validar(formulario){
+	var check = $(".fa-check");
+	
+	if (check.length == 3 ){
+		formulario.submit();
+	}else{	
+		return false;
+	}
+}
+
+
 
 

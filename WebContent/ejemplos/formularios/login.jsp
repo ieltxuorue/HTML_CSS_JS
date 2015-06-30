@@ -39,6 +39,9 @@
 				<br>					
 				<input type="submit" value="Acceder" />			
 			</form>
+			
+			<a href="ejemplos/formularios/registro.jsp" title="Registro usuarios nuevos">¿No tienes Cuenta? Registrate. </a>
+					
 		</div>
 		
 		<footer>
