@@ -18,6 +18,7 @@
 				<li><a title="Calcular Entradas Cine" href="ejemplos/reales/calcularentradas.htm" target="_blank"> Calcular entradas </a></li>
 				<li><a title="Surf Search Spot" href="ejemplos/reales/surfsearchspot.jsp" target="_blank"> Maquetacion Surf </a></li>
 				<li><a title="Ipartek" href="ejemplos/reales/ipartek.jsp" target="_blank"> Maquetacion Ipartek </a></li>
+				<li><a title="Bootstrap" href="ejemplos/reales/bootstrap/bootstrap.jsp" target="_blank"> Bootstrap </a></li>
 			</ul>
 		</li>	
 		<li><h2>Formularios</h2>
