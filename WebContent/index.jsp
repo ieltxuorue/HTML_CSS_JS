@@ -11,10 +11,10 @@
 				<td colspan="4">PROFE</td>
 			</tr>
 			<tr>
-				<td>JAVIER</td>
+				<td>MIKEL</td>
 				<td>CRISTINA</td>  
-				<td>JORGE</td>
-				<td>MIHAI</td>		
+				<td>UNAI</td>
+				<td class="disable">X</td>		
 			</tr>
 			<tr>
 				<td>IELTXU</td>
@@ -23,21 +23,35 @@
 				<td>JAVI</td>		
 			</tr>
 			<tr>
-				<td>JON</td>
+				<td>LARA</td>
 				<td>RAUL</td> 
 				<td>JAIONE</td>
 				<td>DAVID</td>		
 			</tr>
-			<tr>
-				<td>LARA</td>
-				<td>X</td> 
-				<td>UNAI</td> 
-				<td>MIKEL</td>
-			</tr>
+			
 		</table>
 		
 		<p class="numero" id="num_afortunado" >???</p>
 		<input type="button" value="Obtener nuevo afortunad@" class="btn" name="btn_ganador" onclick="obtener_ganador();" />			
+	
+	
+		<style>
+			#resumen {
+				width: 100px;
+				height: 30px;
+				background-color: #228FB8;
+			}
+			
+		</style>
+		
+		<div id="estadisticas">
+			<p><i class="fa fa-plus-square-o"></i> Ranking</p>
+			<table id="ranking">
+							  	
+			</table>
+			
+		</div>
+	
 	</section> 	
 	
 	<!-- Sidebar con contenido NO principal de la pagina -->
@@ -55,6 +69,10 @@
 			<li><a href="http://apps.pixlr.com/editor/" target="_blank">Photoshop Online</a></li>
 			<li><a href="http://es.lipsum.com" target="_blank">lorem ipsum</a></li>
 			<li><a href="http://json.parser.online.fr/" target="_blank">JSON Parser Online</a></li>
+		</ul>
+		
+		<h3>Ultimas visitas</h3>
+		<ul id="ultimas_visitas">
 		</ul>
 	</aside>
 

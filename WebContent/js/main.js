@@ -46,9 +46,91 @@ $(function() {
 			showMonthAfterYear: false,
 			yearSuffix: ''};
 		$.datepicker.setDefaults($.datepicker.regional['es']);
-	});    
+	});  
+	
+	$('#tabla_plugin').DataTable({
+		"language": {					
+				"sProcessing":     "Procesando...",
+				"sLengthMenu":     "Mostrar _MENU_ registros",
+				"sZeroRecords":    "No se encontraron resultados",
+				"sEmptyTable":     "NingÃºn dato disponible en esta tabla",
+				"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+				"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+				"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+				"sInfoPostFix":    "",
+				"sSearch":         "Buscar:",
+				"sUrl":            "",
+				"sInfoThousands":  ",",
+				"sLoadingRecords": "Cargando...",
+				"oPaginate": {
+					"sFirst":    "Primero",
+					"sLast":     "Ãltimo",
+					"sNext":     "Siguiente",
+					"sPrevious": "Anterior"
+				},
+				"oAria": {
+					"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+					"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+				}				
+		  }
+	});
 	
 
+	
+	if (window.sessionStorage && window.localStorage) { 
+				
+		//Mostrar valores de ultima pagina y fecha
+		var last_visited = $('#last_visited');
+		var last_page = localStorage.getItem('last_page');
+		var last_time = localStorage.getItem('last_time');
+		last_visited.append('<p><strong>Ultima pagina visitada:</strong> "'+ last_page +'" '+ last_time );
+		
+		//Ultima pagina visitada
+		localStorage.setItem('last_page', window.location.href);
+		//Hora de la ultima pagina visitada
+		var fecha = new Date();
+		localStorage.setItem('last_time', convertirFecha(fecha,CORTO));
+		
+		//Ultimas 5 paginas visitadas
+		//MOSTRAR Ultimas 5 paginas visitadas
+		var ultimas_visitas = $('#ultimas_visitas');
+		var page_v0 = localStorage.getItem('v0');
+		var page_v1 = localStorage.getItem('v1');
+		var page_v2 = localStorage.getItem('v2');
+		var page_v3 = localStorage.getItem('v3');
+		var page_v4 = localStorage.getItem('v4');
+		
+		ultimas_visitas.append('<li>'+ ((page_v0.split('/'))[page_v0.split('/').length-1]).substring(0,((page_v0.split('/'))[page_v0.split('/').length-1]).length-4) +'</li>');
+		ultimas_visitas.append('<li>'+ ((page_v1.split('/'))[page_v1.split('/').length-1]).substring(0,((page_v1.split('/'))[page_v1.split('/').length-1]).length-4) +'</li>');
+		ultimas_visitas.append('<li>'+ ((page_v2.split('/'))[page_v2.split('/').length-1]).substring(0,((page_v2.split('/'))[page_v2.split('/').length-1]).length-4) +'</li>');
+		ultimas_visitas.append('<li>'+ ((page_v3.split('/'))[page_v3.split('/').length-1]).substring(0,((page_v3.split('/'))[page_v3.split('/').length-1]).length-4) +'</li>');
+		ultimas_visitas.append('<li>'+ ((page_v4.split('/'))[page_v4.split('/').length-1]).substring(0,((page_v4.split('/'))[page_v4.split('/').length-1]).length-4) +'</li>');
+			
+		
+		
+		
+		//ACTUALIZAR Ultimas 5 paginas visitadas
+		var pagina_actual = window.location.href;
+		localStorage.setItem('v0', pagina_actual);
+		localStorage.setItem('v1', page_v0);
+		localStorage.setItem('v2', page_v1);
+		localStorage.setItem('v3', page_v2);
+		localStorage.setItem('v4', page_v3);
+		
+		
+		console.info('Almacenamiento local soportado');
+		//pintar todas las LocalStorages
+//		for(i=0;i<localStorage.length;i++){
+//			console.debug( localStorage.key(i) + '->' + localStorage.getItem(localStorage.key(i)));
+//		}		
+	}else{ 
+		alert('Lo siento, pero tu navegador no acepta almacenamiento local'); 
+	} 
+	
+	
+	
+	
+	
 });
 
 	/* REGISTRO USUARIOS control de usuarios existentes */
@@ -143,6 +225,12 @@ function validar(formulario){
 	}else{	
 		return false;
 	}
+};
+
+function ordenar() {
+	$('#ranking').dataTable( {
+	    "order": [[ 1, "desc" ]]
+	} );
 }
 
 

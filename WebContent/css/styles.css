@@ -214,6 +214,11 @@ article h2{
 }
 
 
+.disable {
+	color: #282828 !important;
+	background-color: #b1b1b1 !important;
+}
+
 /* contenedor para columnas */
 .cnt_cols{
 	width: 100%;

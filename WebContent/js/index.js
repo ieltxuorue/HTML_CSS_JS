@@ -11,100 +11,76 @@
 
 //ARRAY CON TODOS LOS NOMBRES
 var afortunados = [	"PROFE",
-					"JAVIER", "CRISTINA", "JORGE", "MIHAI", 
+					"MIKEL", "CRISTINA", "UNAI",  
 					"IELTXU", "ARITZ", "ANDER", "JAVI",
-					"JON", "RAUL", "JAIONE", "DAVID",
-					"LARA", "UNAI", "MIKEL"];
-					
-//Contador para guardar la tirada en localStorage 
-var cont = 1;
-
-
-function init(){
-
-	//alert esta desaconsejado
-	//alert('onload body ok');
-	
-	
-	/*
-	
-	//Set o guardar elemento en local
-	localStorage [ "l1" ] = "pepe";
-	localStorage.setItem ( "l2", "pepa1" ) ;
-	localStorage.setItem ( "l3", "pepa2" ) ;
-	localStorage.setItem ( "l4", "pepa3" ) ;
-	localStorage.setItem ( "l5", "pepa4" ) ;
-	localStorage.setItem ( "l6", "pepa5" ) ;
-	localStorage.setItem ( "l7", "pepa6" ) ;
-	localStorage.setItem ( "l8", "pepa7" ) ;
-	
-	sessionStorage.setItem ( "s1", "se pierde si cerramos el navegador" ) ;
-	
-	//Recuperar valor por su key
-	console.debug ( localStorage["l1"] );
-	console.debug ( localStorage.getItem("l2") );
-	
-	//remove o eliminar elemento
-	localStorage.removeItem ("l2");
-	console.debug ("cuidado que hemos eliminado a PEPA");
-	
-	//Obtener listado de keys
-	var listado_keys = Object.keys(localStorage);
-	
-	//Visualizar valores keys
-	for(var i in localStorage){
-		console.debug(localStorage[i]);
-	}
-		
-	*/
-
-		
-	//Utilizados para tracear.
-	/*
-	console.info('Muestrame algo que me sirva o sea interesante');
-	console.debug('Es una traza para depurar o ver valores de variables');
-	console.error('Mensaje para cuando falla alguna cosa');
-	*/
-}
-
-
-
-
-	
+					"LARA", "RAUL", "JAIONE", "DAVID"];
+						
 /**
 *	Comentario de funcion:
-*	Genera un numero aleatorio entre el 1 y el 15
+*	Genera un numero aleatorio entre el 1 y el 12
 *	lo muestra en el <label> con id='afortunado'
 */
 function obtener_ganador(){
-
-	console.debug('Click ok');
-	
-	//console.debug( afortunados[0] );
-	//console.debug( afortunados[15] );
-	console.debug( 'Todos los afortunados son : ' + afortunados.length );
-	for (i = 0; i<afortunados.length; i++) {
-		console.debug( 'Posicion: ' + i + ' Persona: ' + afortunados[i] );
-	}
-	
 	
 	var lbl_afortunado = document.getElementById('num_afortunado');
+	
+	//obtener numero aleatorio de 0 a 11
 	var num_aleatorio = Math.floor(Math.random() * (afortunados.length));
 	
+	//Mostrar el numero y el afortunado
 	lbl_afortunado.innerHTML = num_aleatorio + ' - ' + afortunados[num_aleatorio];
 	
+	//Poner fondo blanco a todas las celdas de la tabla
 	var celdas = document.getElementsByTagName('td');
 	for (i = 0; i<celdas.length; i++) {
 		celdas[i].style.backgroundColor = 'white';
 	}
 	
-	localStorage [ Date.now() ] = afortunados[num_aleatorio];
-	cont++;
-	
-	if(num_aleatorio > 13){
-		num_aleatorio++;
+	/*************************************
+	 * 			 ESTADISTICAS 			 *
+	 * Guardar la tirada en localStorage *
+	 *************************************/
+	//Aumentar en uno la tirada.
+	if( localStorage.getItem('TIRADA') ){
+		//Se le suma uno a la tirada
+		localStorage.setItem('TIRADA', parseInt(localStorage.getItem('TIRADA')) + 1 );
+	}else{
+		//Si es la primera tirada inicializarla a 1
+		localStorage.setItem('TIRADA', '1');
 	}
 	
-	celdas[num_aleatorio].style.backgroundColor = 'green';
+	//Comprobar si existe el afortunado en localStorage
+	if( localStorage.getItem(afortunados[num_aleatorio]) ){
+		//El afortunado exite, sumarle uno a su mala suerte
+		localStorage.setItem(afortunados[num_aleatorio], parseInt(localStorage.getItem(afortunados[num_aleatorio])) + 1 );
+	}else{
+		//El afortunado no existia, introducirlo en el localStorage
+		localStorage.setItem(afortunados[num_aleatorio], '1');
+	}
+	
+	//Mostrar el RANKING
+	var ranking = $('#ranking');
+	
+	//limpiar lista
+	ranking.html('<tr><th>Afortunado</th><th>Nº Veces</th><th>Porcentaje(%)</th></tr>');
+	//Recorrer localStorage y mostrar los fortunados
+	for(i=0;i<afortunados.length;i++){
+		if(localStorage.getItem(afortunados[i])){
+			ranking.append('<tr><td>'+ afortunados[i] +'</td><td>'+ localStorage.getItem(afortunados[i]) +'</td><td>'+ localStorage.getItem('TIRADA') +'</td></tr>');
+		}
+	}
+	
+	//ordenar tabla [dataTable]
+	ordenar();
+	
+	/********************
+	 * FIN ESTADISTICAS *
+	 ********************/
+	
+	//Pintar la celda correspondiente de la tabla
+	if(num_aleatorio > 3){
+		num_aleatorio++;
+	}
+	celdas[num_aleatorio].style.backgroundColor = '#01245C';
 	
 }

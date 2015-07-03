@@ -56,9 +56,12 @@
 	<!-- https://highlightjs.org/ -->
 	<script src="js/highlightjs-8.6/highlight.pack.js"></script>
 	
+	<!-- http://datatables.net/download/index -->
+  	<script src="js/DataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->
 	<script src="js/main.js" ></script>
-	<script src="js/utilidades.js?v=20150624_v1"></script>	
+	<script src="js/utilidades.js?v=20150624_v1"></script>
 
 </body>
 </html>

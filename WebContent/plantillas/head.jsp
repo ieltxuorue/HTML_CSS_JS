@@ -28,6 +28,8 @@
 	<link rel="stylesheet" type="text/css" href="fonts/fontcartelera/style.css">
 	<!-- Highlight.js" -->
 	<link rel="stylesheet" href="js/highlightjs-8.6/styles/github.css">
+	<!-- dataTables.js" -->
+	<link rel="stylesheet" type="text/css" href="js/DataTables-1.10.7/css/jquery.dataTables.min.css">
 	
 	<!-- http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/ -->  	
   	<link rel="stylesheet" href="js/ResponsiveMultiLevelMenu/css/component.css">
@@ -177,10 +179,9 @@
 		
 		<div class="clearfix">
 			<div id="logo">
-				<a href=""><img src="img/dado.png" alt="Dado de seis caras"/></a>
+				<a href="index.jsp"><img src="img/dado.png" alt="Dado de seis caras"/></a>
 			</div>
 		
 			<h1 id="titulo">Ejemplos HTML5, CSS3 y JS</h1>
 		</div>	<!-- Navegacion menu principal -->
-
-	
+		

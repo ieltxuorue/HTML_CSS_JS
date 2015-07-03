@@ -106,3 +106,7 @@
 </header>
 
 <div id="content">
+
+	<div id="last_visited">
+			
+	</div>
