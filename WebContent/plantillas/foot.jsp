@@ -58,6 +58,9 @@
 	
 	<!-- http://datatables.net/download/index -->
   	<script src="js/DataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+  	
+  	<!-- https://yoast.com/articles/sortable-table/#download -->
+  	<script src="js/sortable-1.2.1/sortable.js"></script>
 	
 	<!-- Custom JavaScript despues de cargar todas las librerias -->
 	<script src="js/main.js" ></script>

@@ -9,6 +9,10 @@
 
 */
 
+function init(){
+	console.debug('index init()')
+}
+
 //ARRAY CON TODOS LOS NOMBRES
 var afortunados = [	"PROFE",
 					"MIKEL", "CRISTINA", "UNAI",  
@@ -66,13 +70,10 @@ function obtener_ganador(){
 	//Recorrer localStorage y mostrar los fortunados
 	for(i=0;i<afortunados.length;i++){
 		if(localStorage.getItem(afortunados[i])){
-			ranking.append('<tr><td>'+ afortunados[i] +'</td><td>'+ localStorage.getItem(afortunados[i]) +'</td><td>'+ localStorage.getItem('TIRADA') +'</td></tr>');
+			ranking.append('<tr><td>'+ afortunados[i] +'</td><td>'+ localStorage.getItem(afortunados[i]) +'</td><td>'+ parseInt(parseInt(localStorage.getItem(afortunados[i]))*100/parseInt(localStorage.getItem('TIRADA'))) +'</td></tr>');
 		}
 	}
-	
-	//ordenar tabla [dataTable]
-	ordenar();
-	
+		
 	/********************
 	 * FIN ESTADISTICAS *
 	 ********************/

@@ -32,7 +32,7 @@
 		</table>
 		
 		<p class="numero" id="num_afortunado" >???</p>
-		<input type="button" value="Obtener nuevo afortunad@" class="btn" name="btn_ganador" onclick="obtener_ganador();" />			
+		<input type="button" value="Obtener nuevo afortunad@" class="btn" name="btn_ganador" onclick="obtener_ganador(); sortables_init();" />			
 	
 	
 		<style>
@@ -46,7 +46,7 @@
 		
 		<div id="estadisticas">
 			<p><i class="fa fa-plus-square-o"></i> Ranking</p>
-			<table id="ranking">
+			<table id="ranking" class="sortable">
 							  	
 			</table>
 			
