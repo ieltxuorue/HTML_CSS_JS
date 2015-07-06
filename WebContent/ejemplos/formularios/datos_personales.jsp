@@ -12,10 +12,10 @@
 		<fieldset>
 		<legend>Datos personales:</legend>	
 			<label>Nombre:</label><br>
-			<input type="text" name="nombre" value="" placeholder="Introduce tu nombre" required pattern="[a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256}" />
+			<input type="text" name="nombre" value="" placeholder="Introduce tu nombre" required pattern="[a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256}" autofocus tabindex="1"/>
 			<br>
 			<label>Apellidos:</label><br>
-			<input type="text" name="apellidos" value="" placeholder="Introduce tus dos apellidos" required pattern="[a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256} [a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256}"/>
+			<input type="text" name="apellidos" value="" placeholder="Introduce tus dos apellidos" required pattern="[a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256} [a-zA-ZáÁéÉíÍóÓúÚüÜñÑ]{2,256}" tabindex="3"/>
 			<br>	
 			<label>DNI:</label><br>
 			<input type="text" name="dni" value="" placeholder="Ej. 12345678A" title="Ocho numeros seguidos de una letra en mayuscula sin espacios en blanco" pattern="[0-9]{8}[A-Z]{1}" />
@@ -24,7 +24,7 @@
 			<input type="text" name="profesion" value="Estudiante" readonly />
 			<br>		
 			<label>Edad:</label><br>
-			<input type="text" name="edad" value="" placeholder="0-99" size="2" required pattern="[0-9]{1,2}" />
+			<input type="text" name="edad" value="" placeholder="0-99" size="2" required pattern="[0-9]{1,2}" tabindex="2"/>
 			<br>		
 			<label>Rol:</label><br>
 			<input type="text" name="rol" value="Usuario" disabled />
