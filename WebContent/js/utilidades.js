@@ -1,4 +1,4 @@
-document.getElementsByName("body").onload = cambiarPestanna(pestanas,pestana1);
+//document.getElementsByName("body").onload = cambiarPestanna(pestanas,pestana1);
 
 /**
 *	Ejemplo de uso de un switch-case. 

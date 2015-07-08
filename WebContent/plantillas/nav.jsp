@@ -37,6 +37,7 @@
 				<li><a title="canvas" href="ejemplos/nuevas_etiquetas_html5/canvas.jsp" > canvas </a></li>
 				<li><a title="datalist" href="ejemplos/nuevas_etiquetas_html5/datalist.jsp" > datalist </a></li>
 				<li><a title="barra_progreso" href="ejemplos/nuevas_etiquetas_html5/barra_progreso.jsp" > Progres y meter </a></li>
+				<li><a title="API Geolocalizacion" href="ejemplos/nuevas_etiquetas_html5/geolocalizacion.jsp" > API Geolocalizacion </a></li>
 			</ul>
 		</li>
 		<li><h2>CSS</h2>
