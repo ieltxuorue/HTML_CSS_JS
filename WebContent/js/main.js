@@ -129,11 +129,44 @@ $(function() {
 	
 	
 	
-	
+	/****************************************************
+	 * 	  TEXTAREA LIMITADO A 256 CARACTERES (PARTE 1)	*
+	 ****************************************************/
+	//Creacion del span char_max
+	$('textarea[data-role="observaciones"]').after('<span class="char_max">0/256</span>');
 	
 });
 
-	/* REGISTRO USUARIOS control de usuarios existentes */
+/****************************************************
+ * 	  TEXTAREA LIMITADO A 256 CARACTERES (PARTE 2)	*
+ ****************************************************/
+
+//
+$('textarea[data-role="observaciones"]').focus(function(){
+	$('textarea[data-role="observaciones"]').keypress(function(){
+		console.info('tecla pulsada');
+		var cont_caracteres = ($('textarea[data-role="observaciones"]').val().length)+1;
+		if(cont_caracteres <= 256){
+			$('.char_max').html('');
+			$('.char_max').append(cont_caracteres + '/256');
+		}
+		
+		/*************
+		 * TODO
+		 * onkeypress="return justNumbers(event);
+		 * 
+		 * function justNumbers(event) {
+    			return event.charCode >= 48 && event.charCode <= 57;
+			} //end:function justNumbers
+		 * 
+		 */
+	});
+	
+		
+});
+	
+
+/* REGISTRO USUARIOS control de usuarios existentes */
 
 function llamadaAjax(code){
 	

@@ -88,6 +88,13 @@
 			<textarea name="cv" rows="13" cols="65" placeholder="Introduce tu CV en texto plano (minimo 20 lineas)..." ></textarea>
 		</fieldset>
 		
+		<fieldset>
+		<legend>Observaciones:</legend>
+			<textarea name="observaciones" rows="13" cols="65" data-role="observaciones" maxlength="256"></textarea>
+		</fieldset>
+		
+
+		
 		<input type="reset" value="Borrar formulario" />	
 		<input type="submit" value="Guardar datos" />	
 
