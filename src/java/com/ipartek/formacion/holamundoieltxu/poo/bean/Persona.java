@@ -1,8 +1,8 @@
 package com.ipartek.formacion.holamundoieltxu.poo.bean;
 
 /**
- * Bean para moderar una PErsona fisica
- * @author Curso
+ * Bean para moderar una Persona fisica
+ * @author Ieltxu
  *
  */
 public class Persona {
