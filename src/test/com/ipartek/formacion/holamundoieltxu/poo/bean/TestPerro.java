@@ -17,7 +17,9 @@ public class TestPerro {
 		//Se ejecuta ANTES de comenzar esta Clase de Test
 		
 		/*
-		 * Aqui se meten valores que no se vayan a modificar en ninguno de los testes 
+		 * Aqui se meten valores que no se vayan a modificar en ninguno de los testes
+		 * 		Conexion a base de Datos
+		 * 		... 
 		 */
 		
 	}

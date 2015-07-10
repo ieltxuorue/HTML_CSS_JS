@@ -48,12 +48,8 @@ public class Persona {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		if(nombre == null){
-			this.nombre = "Anonimo";
-		}else{
-			this.nombre = nombre;
-		}
+	public void setNombre(String nombre) {		
+		this.nombre = nombre;
 	}
 
 	public String getApellido() {
@@ -61,11 +57,7 @@ public class Persona {
 	}
 
 	public void setApellido(String apellido) {
-		if(apellido == null){
-			this.apellido = "Sin Determinar";
-		}else{
-			this.apellido = apellido;
-		}
+		this.apellido = apellido;
 	}
 
 	public int getEdad() {
