@@ -100,8 +100,6 @@ public class Perro {
 		return ("GUAU GUAU GUAU");
 	}
 
-	public void saltar(int metros, int altura){
-		System.out.println(this.nombre + " ha saltado " + metros + "metros.");
-	}
+
 	
 }
