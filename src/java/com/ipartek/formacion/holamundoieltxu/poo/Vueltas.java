@@ -1,7 +1,8 @@
 package com.ipartek.formacion.holamundoieltxu.poo;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
+
+import com.ipartek.formacion.holamundoieltxu.util.Utilidades;
 
 public class Vueltas {
 	
@@ -103,7 +104,7 @@ public class Vueltas {
 			while(cambios>BILLETES_MONEDAS[i]){
 				cantidadBilletesMonedas[i]++;
 				cambios = cambios - BILLETES_MONEDAS[i];
-				cambios = round(cambios, 2);
+				cambios = Utilidades.round(cambios, 2);
 			}
 			
 		}
@@ -117,21 +118,4 @@ public class Vueltas {
 		System.out.println("--------------------------------------------------------");
 	}
 	
-	/**
-     * Round redondea numeros decimales
-     * 
-     * @param d numero decimal a redondear
-     * @param decimalPlace numero de decimales
-     * @return numero redondeado
-     */
-
-    public static float round(float d, int decimalPlace) {
-         return BigDecimal.valueOf(d).setScale(decimalPlace,BigDecimal.ROUND_HALF_UP).floatValue();
-    }
-	
-	
-	
-	
-	
-
 }
