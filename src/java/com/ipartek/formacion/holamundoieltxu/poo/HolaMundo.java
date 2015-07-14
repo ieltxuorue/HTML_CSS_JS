@@ -29,7 +29,8 @@ public class HolaMundo {
 		System.out.println(persona2.toString());
 		
 		
-
+		Vueltas vueltas = new Vueltas(2000f, 1326.24f);
+		
 		
 	}
 
