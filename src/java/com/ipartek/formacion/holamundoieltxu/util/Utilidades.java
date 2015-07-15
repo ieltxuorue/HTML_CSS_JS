@@ -1,6 +1,8 @@
 package com.ipartek.formacion.holamundoieltxu.util;
 
 import java.math.BigDecimal;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utilidades {
 	public static final int ASCENDENTE = 0;
@@ -69,5 +71,22 @@ public class Utilidades {
 		return arrayOrdenado;
     }
 	
+    /**
+     * Funcion que verifica si el parametro pasado tiene un formato de email.
+     * @param correo email a verificar
+     * @return retorna booleano true si es email, false si no lo es.
+     */
+    public static boolean isEmail(String correo) {
+        Pattern pat = null;
+        Matcher mat = null;        
+        pat = Pattern.compile("^([0-9a-zA-Z]([_.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+([a-zA-Z]{2,9}.)+[a-zA-Z]{2,3})$");
+        mat = pat.matcher(correo);
+        if (mat.find()) {
+            System.out.println("[" + mat.group() + "]");
+            return true;
+        }else{
+            return false;
+        }        
+    }
 	
 }
